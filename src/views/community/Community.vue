@@ -20,11 +20,7 @@
     </div>
 
     <v-container>
-        <v-card height="100" class="d-flex justify-center align-center my-10" flat>
-            <v-card-text class="text-center text-h6 font-weight-bold">
-                OUR COMMUNITIES
-            </v-card-text>
-        </v-card>
+        <Heading text="OUR COMMUNITIES" />
 
         <v-row>
             <v-col v-for="(community, i) in communities" :key="i" cols="6" sm="3">
@@ -45,6 +41,7 @@
 
 <script>
 import ContactUsForm from '@/components/ContactUsForm.vue'
+import Heading from '@/components/Heading.vue'
 export default {
     data: () => ({
         communities: [
@@ -72,7 +69,8 @@ export default {
     }),
 
     components: {
-        ContactUsForm
+        ContactUsForm,
+        Heading
     }
 }
 </script>

@@ -22,7 +22,23 @@
       </v-btn>
     </v-container>
   </div>
+
+  <v-container>
+    <Heading text="OUR COURSES" />
+    <Courses :slice="6" />
+  </v-container>
 </template>
+
+<script>
+import Heading from '@/components/Heading.vue'
+import Courses from '@/components/Courses.vue'
+export default {
+  components: {
+    Heading,
+    Courses
+  }
+}
+</script>
 
 <style scoped>
 .v-heade {

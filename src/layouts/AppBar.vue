@@ -24,9 +24,14 @@ export default {
                 to: '/'
             },
             {
-                title: 'About',
+                title: 'About Us',
                 icon: 'mdi-account',
                 to: '/about'
+            },
+            {
+                title: 'Courses',
+                icon: 'mdi-account',
+                to: '/courses'
             },
             {
                 title: 'Contact',

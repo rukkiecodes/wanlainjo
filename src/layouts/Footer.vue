@@ -11,9 +11,14 @@
                         </v-col>
                     </v-row>
                 </v-col>
-                <v-col cols="12" md="4" class="d-flex align-center justify-center">
-                    <v-text-field variant="outlined" density="comfortable" placeholder="Email address" class="bg-white" hide-details />
-                    <v-btn height="48" flat class="bg-indigo-darken-4 ml-4">Subscribe</v-btn>
+                <v-col cols="12" md="4" class="">
+                    <p class="text-white text-h6">Subscribe to our newsletter</p>
+                    <p class="text-white text-caption mb-5">Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex align-center justify-center">
+                        <v-text-field variant="outlined" density="comfortable" placeholder="Email address"
+                            class="bg-white" hide-details />
+                        <v-btn height="48" flat class="bg-indigo-darken-4 ml-4">Subscribe</v-btn>
+                    </div>
                 </v-col>
             </v-row>
         </v-container>
