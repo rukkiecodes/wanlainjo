@@ -24,26 +24,21 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style scoped>
 .v-heade {
   height: 100vh;
   display: flex;
   align-items: center;
   color: #fff;
-  position: relative;
 }
 
 .container {
-  max-width: 960px;
+  width: 100%;
+  height: 100vh;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
+  position: relative;
 }
 
 .fullscreen-video-wrap {
