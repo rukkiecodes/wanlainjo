@@ -6,11 +6,7 @@
 
         <v-spacer />
 
-        <router-link v-for="(route, i) in routes" :key="i" :to="route.to"
-            class="ml-4 text-decoration-none text-grey-darken-3 text-body-1"
-            active-class="text-blue-darken-4 font-weight0-bold">{{
-    route.title
-            }}</router-link>
+        <v-btn v-for="(route, i) in routes" :key="i" :to="route.to" variant="text" class="text-body-1 ml-2">{{ route.title }}</v-btn>
     </v-app-bar>
 </template>
 
