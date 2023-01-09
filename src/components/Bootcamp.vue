@@ -1,18 +1,16 @@
 <template>
     <v-row>
-        <v-col cols="12" sm="4" v-for="(course, i) in courses.slice(0, slice)" :key="i">
+        <v-col cols="12" sm="6" v-for="(course, i) in courses.slice(0, slice)" :key="i">
             <v-card>
                 <v-card max-height="200" flat>
                     <v-img :src="course.image" />
                 </v-card>
                 <v-card-title>
-                    <router-link :to="course.to" class="text-decoration-none text-grey-darken-4">{{ course.title }}</router-link>
+                    <router-link :to="course.to" class="text-decoration-none text-grey-darken-4">{{
+                        course.title
+                    }}</router-link>
                 </v-card-title>
                 <v-card-text>{{ course.body }} </v-card-text>
-                <v-card-actions>
-                    <v-btn flat style="flex: .5;" class="bg-grey-darken-4 text-capitalize">View Details</v-btn>
-                    <v-btn flat style="flex: 1;" class="bg-indigo-darken-4 text-capitalize">Apply Now</v-btn>
-                </v-card-actions>
             </v-card>
         </v-col>
     </v-row>

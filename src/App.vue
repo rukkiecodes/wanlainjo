@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppBar />
-    <Drawer />
+    <!-- <Drawer /> -->
     
     <v-main>
       <router-view />
@@ -12,12 +12,12 @@
 
 <script>
 import AppBar from '@/layouts/AppBar.vue'
-import Drawer from '@/layouts/Drawer.vue'
+// import Drawer from '@/layouts/Drawer.vue'
 import Footer from '@/layouts/Footer.vue'
 export default {
   components: {
     AppBar,
-    Drawer,
+    // Drawer,
     Footer
   }
 }
