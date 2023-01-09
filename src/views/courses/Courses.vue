@@ -12,9 +12,7 @@
         </v-container>
     </div>
 
-    <v-container>
-        <Heading text="OUR COURSES" />
-
+    <v-container class="mt-16">
         <Courses />
 
         <ContactUsForm class="mt-16" />
@@ -23,12 +21,10 @@
 
 <script>
 import ContactUsForm from '@/components/ContactUsForm.vue'
-import Heading from '@/components/Heading.vue'
 import Courses from '@/components/Courses.vue'
 export default {
     components: {
         ContactUsForm,
-        Heading,
         Courses
     }
 }
