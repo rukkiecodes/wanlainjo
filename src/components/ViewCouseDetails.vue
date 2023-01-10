@@ -7,7 +7,7 @@
                 <v-btn dark class="bg-indigo-darken-3 text-capitalize" @click="viewCourse.dialog = false">
                     Close
                 </v-btn>
-                <v-btn class="bg-white ml-4 text-capitalize" @click="viewCourse.dialog = false">
+                <v-btn class="bg-white ml-4 text-capitalize" href="https://wanlainjoregistrationform.netlify.app/">
                     Apply Now
                 </v-btn>
             </v-toolbar>

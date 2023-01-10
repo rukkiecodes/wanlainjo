@@ -10,7 +10,7 @@
                 <v-card-actions>
                     <v-btn @click="viewCurrentCourse(course)" flat style="flex: .5;"
                         class="bg-grey-darken-2 text-capitalize">View Details</v-btn>
-                    <v-btn flat style="flex: 1;" class="bg-indigo-darken-4 text-capitalize">Apply Now</v-btn>
+                    <v-btn flat style="flex: 1;" href="https://wanlainjoregistrationform.netlify.app" class="bg-indigo-darken-4 text-capitalize">Apply Now</v-btn>
                 </v-card-actions>
             </v-card>
         </v-col>
