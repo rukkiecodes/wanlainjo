@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 .v-heade {
-    height: 50vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -40,7 +40,7 @@ export default {
 
 .container {
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;

@@ -10,7 +10,7 @@
                 </v-card-title>
                 <v-card-text>{{ course.body }} </v-card-text>
                 <v-card-actions>
-                    <v-btn flat style="flex: .5;" class="bg-grey-darken-4 text-capitalize">View Details</v-btn>
+                    <v-btn flat style="flex: .5;" class="bg-grey-darken-2 text-capitalize">View Details</v-btn>
                     <v-btn flat style="flex: 1;" class="bg-indigo-darken-4 text-capitalize">Apply Now</v-btn>
                 </v-card-actions>
             </v-card>

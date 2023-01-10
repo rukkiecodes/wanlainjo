@@ -4,7 +4,7 @@
             <v-row>
                 <v-col cols="12" md="8">
                     <v-row dense>
-                        <v-col cols="12" sm="4" v-for="(route, i) in routes" :key="i">
+                        <v-col cols="6" sm="4" v-for="(route, i) in routes" :key="i">
                             <router-link :to="route.to" class="text-decoration-none text-white text-body-2">{{
                                 route.title
                             }}</router-link>

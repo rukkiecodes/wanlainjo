@@ -6,35 +6,17 @@
 
         <v-spacer />
 
-        <v-btn v-for="(route, i) in routes" :key="i" :to="route.to" variant="text" class="text-body-1 ml-2">{{ route.title }}</v-btn>
+        <v-btn v-for="(route, i) in routes" :key="i" :to="route.to" variant="text" class="text-body-1 ml-2 hidden-xs">{{ route.title }}</v-btn>
+        <v-app-bar-nav-icon @click="drawer.drawer = !drawer.drawer" class="hidden-sm-and-up" />
     </v-app-bar>
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
 export default {
-    data: () => ({
-        routes: [
-            {
-                title: 'Home',
-                icon: 'mdi-home',
-                to: '/'
-            },
-            {
-                title: 'About Us',
-                icon: 'mdi-account',
-                to: '/about'
-            },
-            {
-                title: 'Courses',
-                icon: 'mdi-account',
-                to: '/courses'
-            },
-            {
-                title: 'Contact',
-                icon: 'mdi-phone',
-                to: '/contact'
-            }
-        ]
-    })
+    computed: {
+        ...mapState(['drawer']),
+        ...mapGetters(['routes'])
+    }
 }
 </script>
