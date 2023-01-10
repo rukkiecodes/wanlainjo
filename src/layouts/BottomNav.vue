@@ -1,21 +1,21 @@
 <template>
     <v-bottom-navigation grow>
-        <v-btn value="recent">
-            <v-icon>mdi-history</v-icon>
+        <v-btn to="/courses" value="courses">
+            <v-icon>mdi-account-school</v-icon>
 
-            Recent
+            courses
         </v-btn>
 
-        <v-btn value="favorites">
-            <v-icon>mdi-heart</v-icon>
+        <v-btn to="/contact" value="contact">
+            <v-icon>mdi-phone</v-icon>
 
-            Favorites
+            Contact
         </v-btn>
 
-        <v-btn value="nearby">
-            <v-icon>mdi-map-marker</v-icon>
+        <v-btn to="/events" value="events">
+            <v-icon>mdi-party-popper</v-icon>
 
-            Nearby
+            Events
         </v-btn>
     </v-bottom-navigation>
 </template>

@@ -13,7 +13,7 @@ const state = {
         },
         {
             title: 'Courses',
-            icon: 'mdi-account',
+            icon: 'mdi-account-school',
             to: '/courses'
         },
         {
