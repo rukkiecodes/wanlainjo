@@ -35,6 +35,9 @@
           </v-toolbar>
 
           <v-card class="ma-0 pa-0">
+            <!-- <v-card-title>{{
+              form.step == 1 ? "Student's details" : form.step == 2 ? "Sponsorship" : "Student's details"
+            }}</v-card-title> -->
             <v-card-title>{{
               form.step == 1 ? "Student's details" : form.step == 2 ? "Sponsorship" : "Student's details"
             }}</v-card-title>
