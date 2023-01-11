@@ -313,6 +313,19 @@ const actions = {
                         this.state.snackbar.active = true
                         this.state.snackbar.color = 'green'
                         this.state.snackbar.text = 'Registration completed'
+
+                        this.state.form.credentials.studentsname = ''
+                        this.state.form.credentials.swx = ''
+                        this.state.form.credentials.address = ''
+                        this.state.form.credentials.dob = ''
+                        this.state.form.credentials.state = ''
+                        this.state.form.credentials.phone = ''
+                        this.state.form.credentials.email = ''
+                        this.state.form.credentials.sponsorName = ''
+                        this.state.form.credentials.sponsorAddress = ''
+                        this.state.form.credentials.sponsorPhone = ''
+                        this.state.form.image = null
+                        this.state.form.step = 1
                     })
             }
         )
