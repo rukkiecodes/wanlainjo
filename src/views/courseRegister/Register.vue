@@ -88,7 +88,7 @@
                     <v-file-input
                       @change="form.image = $event.target.files[0]"
                       density="compact"
-                      label="User image"
+                      label="Your image"
                       variant="outlined"
                     />
                     <v-text-field
