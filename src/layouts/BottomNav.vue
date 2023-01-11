@@ -12,10 +12,10 @@
             Contact
         </v-btn>
 
-        <v-btn to="/events" value="events">
+        <!-- <v-btn to="/events" value="events">
             <v-icon>mdi-party-popper</v-icon>
 
             Events
-        </v-btn>
+        </v-btn> -->
     </v-bottom-navigation>
 </template>
