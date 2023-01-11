@@ -197,7 +197,7 @@
                     </v-card>
                 </v-col>
                 <v-col cols="12" sm="6">
-                    <v-card class="overflow-hidden pa-0 ma-0 d-flex align-center" flat color="red" width="600"
+                    <v-card class="overflow-hidden pa-0 ma-0 d-flex align-center" flat color="transparent" width="600"
                         max-width="100%">
                         <video style="width: 100%;" controls>
                             <source
