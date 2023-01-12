@@ -3,11 +3,6 @@ const state = {
     dislog: false,
 }
 
-const mutations = {
-    viewCurrentCourse(state, course) {
-        state.currentCourse = course
-        state.dialog = true
-    }
-}
+const mutations = {}
 
 export default { state, mutations }

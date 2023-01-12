@@ -8,7 +8,7 @@
             currentCourse?.title
           }}</v-card-title>
 
-          <v-card-text class="text-body-2 mt-4">
+          <v-card-text class="text-body-1 mt-4">
             {{ currentCourse.body }}
           </v-card-text>
         </v-card>

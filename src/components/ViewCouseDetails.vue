@@ -39,56 +39,55 @@
                   viewCourse.currentCourse.body
                 }}</v-card-text>
                 <v-card-text>
-                  <v-timeline
+                  <v-card
+                    class="elevation-2 mb-4"
+                    v-for="(outline, i) in viewCourse.currentCourse.outline"
+                    :key="i"
+                  >
+                    <v-list>
+                      <v-list-item :title="outline.title">
+                        <template v-slot:append>
+                          <v-btn
+                            @click="outline.show = !outline.show"
+                            color="grey-lighten-1"
+                            :icon="
+                              outline.show
+                                ? 'mdi-chevron-up'
+                                : 'mdi-chevron-down'
+                            "
+                            variant="text"
+                          ></v-btn>
+                        </template>
+                      </v-list-item>
+                    </v-list>
+                    <v-expand-transition>
+                      <v-card-text v-show="outline.show">
+                        <v-list density="compact">
+                          <v-list-item
+                            v-for="(item, i) in outline.breakdown"
+                            :key="i"
+                            density="compact"
+                            class="py-0 text-caption"
+                            :title="item"
+                          >
+                          </v-list-item>
+                        </v-list>
+                      </v-card-text>
+                    </v-expand-transition>
+                  </v-card>
+                  <!-- <v-timeline
                     v-for="(outline, i) in viewCourse.currentCourse.outline"
                     :key="i"
                   >
                     <v-timeline-item size="x-small">
                       <template v-slot:icon>
-                        <v-avatar color="indigo" size="small">
+                        <v-avatar color="indigo-darken-4" size="small">
                           {{ i + 1 }}
                         </v-avatar>
                       </template>
-                      <template v-slot:opposite>
-                        <span
-                          class="d-none d-md-flex text-caption font-weight-bold"
-                          >Month</span
-                        >
-                      </template>
-                      <v-card class="elevation-2" width="500" max-width="100%">
-                        <v-list>
-                          <v-list-item :title="outline.title">
-                            <template v-slot:append>
-                              <v-btn
-                                @click="outline.show = !outline.show"
-                                color="grey-lighten-1"
-                                :icon="
-                                  outline.show
-                                    ? 'mdi-chevron-up'
-                                    : 'mdi-chevron-down'
-                                "
-                                variant="text"
-                              ></v-btn>
-                            </template>
-                          </v-list-item>
-                        </v-list>
-                        <v-expand-transition>
-                          <v-card-text v-show="outline.show">
-                            <v-list density="compact">
-                              <v-list-item
-                                v-for="(item, i) in outline.breakdown"
-                                :key="i"
-                                density="compact"
-                                class="py-0 text-caption"
-                                :title="item"
-                              >
-                              </v-list-item>
-                            </v-list>
-                          </v-card-text>
-                        </v-expand-transition>
-                      </v-card>
+                      
                     </v-timeline-item>
-                  </v-timeline>
+                  </v-timeline> -->
                 </v-card-text>
               </v-card>
             </v-col>
