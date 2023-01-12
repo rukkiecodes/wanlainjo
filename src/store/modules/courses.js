@@ -5,6 +5,13 @@ const state = {
             title: 'Microsoft Office Suite',
             body: 'MS Word, MS Excel, MS PowerPoint, MS Outlook, MS OneDrive, MS Teams',
             subtext: "Acquire the essential skills needed for producing professional work using Microsoft",
+            whatYouWillLearn: [
+                "Create and edit documents, spreadsheets, presentations, and emails",
+                "Collaborate with others on documents, spreadsheets, and presentations",
+                "Use the tools in Word, Excel, PowerPoint, Outlook, and OneDrive to create and edit documents, spreadsheets, presentations, and emails",
+            ],
+            price: 40000,
+            duration: 5,
             outline: [
                 {
                     title: 'Word',
@@ -94,6 +101,16 @@ const state = {
             title: 'Graphic Design',
             body: 'Understand your audience and business goals. Design delightful visuals and improve viewers’ engagement and conversion',
             subtext: "Become a Professional Graphic Designer",
+            whatYouWillLearn: [
+                "Learn the basics of graphic design",
+                "Learn how to use Adobe Illustrator and Photoshop",
+                "Learn how to create a logo, poster, and composite image",
+                "Learn how to create a mood board",
+                "Learn how to create a presentation for your clients",
+                "Learn how to export your files",
+            ],
+            price: 50000,
+            duration: 8,
             outline: [
                 {
                     title: 'Introduction to Graphic Design',
@@ -225,6 +242,14 @@ const state = {
             title: 'Front-end Development',
             body: 'Become an industry expert and create amazing web resources using front-end web technologies.',
             subtext: "Front-end Web Development",
+            whatYouWillLearn: [
+                "Learn the basics of front-end web development",
+                "Learn how to use HTML, CSS and Javascript",
+                "Learn how to create a website from scratch",
+                "Learn how to create a web application",
+            ],
+            price: 85000,
+            duration: 13,
             outline: [
                 {
                     title: 'Introduction to Web Development and React',
@@ -281,6 +306,14 @@ const state = {
             title: 'Fullstack Development',
             body: 'Become a Certified Fullstack Software Developer',
             subtext: "Build functional software’s and web applications to solve real problems.",
+            whatYouWillLearn: [
+                "Learn how to build a fullstack web application",
+                "Learn how to build a fullstack mobile application",
+                "Learn how to build a fullstack desktop application",
+                "Learn how to build a fullstack chatbot application",
+            ],
+            price: 190000,
+            duration: 26,
             outline: [
                 {
                     title: 'COURSE INTRODUCTION',
@@ -363,6 +396,13 @@ const state = {
             title: 'Back-end Development(PHP)',
             body: 'PHP(vanilla), laravel, MySQL, PostgreSQL',
             subtext: "Back-end Web Development With PHP",
+            whatYouWillLearn: [
+                "Learn how to build a fullstack web application",
+                "Learn how to build a fullstack mobile application",
+                "Learn how to build a fullstack desktop application",
+            ],
+            price: 100000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to PHP',
@@ -484,6 +524,13 @@ const state = {
             title: 'Python Programming',
             body: 'HTML5, CSS3, JavaScript(Vanilla), Python, Django, Git/Github etc',
             subtext: "Python Programming",
+            whatYouWillLearn: [
+                "Learn how to build a fullstack web application",
+                "Learn how to build a fullstack mobile application",
+                "Learn how to build a fullstack desktop application",
+            ],
+            price: 100000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to Python',
@@ -673,6 +720,18 @@ const state = {
             title: 'Back-end Development(NODE)',
             body: 'Express, MongoDB, MySQL, PostgreSQL',
             subtext: "Node.js Programming",
+            whatYouWillLearn: [
+                "Learn Node.js from scratch",
+                "Learn Express.js",
+                "Learn MongoDB",
+                "Learn MySQL",
+                "Learn PostgreSQL",
+                "Learn how to build a RESTful API",
+                "Learn how to build a CRUD application",
+                "Learn how to build a real world application",
+            ],
+            price: 100000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to Node.js',
@@ -812,6 +871,9 @@ const state = {
             title: 'Teens Coding',
             body: 'Morbi in libero blandit lectus cursus ullamcorper.',
             subtext: "Teens Coding",
+            whatYouWillLearn: [],
+            price: 100000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to Teens Coding',
@@ -828,6 +890,14 @@ const state = {
             title: '3D Cartoon Animation',
             body: 'Morbi in libero blandit lectus cursus ullamcorper.',
             subtext: "3D Cartoon Animation",
+            whatYouWillLearn: [
+                "Learn 3D Cartoon Animation from scratch",
+                "Learn 3D Cartoon Animation Tools",
+                "Learn 3D Cartoon Animation Techniques",
+                "Learn 3D Cartoon Animation Software",
+            ],
+            price: 100000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to 3D Cartoon Animation',
@@ -844,6 +914,16 @@ const state = {
             title: 'Database Management',
             body: 'Morbi in libero blandit lectus cursus ullamcorper.',
             subtext: "Database Management",
+            whatYouWillLearn: [
+                "Learn Database Management from scratch",
+                "Learn Database Management Tools",
+                "Learn Database Management Types",
+                "Learn Database Management Models",
+                "Learn Database Management Languages",
+                "Learn Database Management System",
+            ],
+            price: 80000,
+            duration: 13,
             outline: [
                 {
                     title: 'Introduction to Database Management',
@@ -871,6 +951,16 @@ const state = {
             title: 'Networking',
             body: 'Morbi in libero blandit lectus cursus ullamcorper.',
             subtext: "Networking",
+            whatYouWillLearn: [
+                "Learn Networking from scratch",
+                "Learn Networking Tools",
+                "Learn Networking Types",
+                "Learn Networking Models",
+                "Learn Networking Languages",
+                "Learn Networking System",
+            ],
+            price: 80000,
+            duration: 13,
             outline: [
                 {
                     title: 'Introduction to Networking',
@@ -898,6 +988,14 @@ const state = {
             title: 'Digital Marketing',
             body: 'Learn modern digital trends & methods to develop key marketing strategies and spur growth for small to large scale businesses.',
             subtext: "Become a Certified Digital Marketer",
+            whatYouWillLearn: [
+                "Learn Digital Marketing from scratch",
+                "Learn Digital Marketing Tools",
+                "Learn Digital Marketing Types",
+                "Learn Digital Marketing Models",
+            ],
+            price: 80000,
+            duration: 8,
             outline: [
                 {
                     title: ' Digital Marketing and SEO',
@@ -985,6 +1083,14 @@ const state = {
             title: 'Robotics / AI',
             body: 'Morbi in libero blandit lectus cursus ullamcorper.',
             subtext: "Robotics / AI",
+            whatYouWillLearn: [
+                "Learn Robotics / AI from scratch",
+                "Learn Robotics / AI Tools",
+                "Learn Robotics / AI Types",
+                "Learn Robotics / AI Models",
+            ],
+            price: 120000,
+            duration: 17,
             outline: [
                 {
                     title: 'Introduction to Robotics / AI',
