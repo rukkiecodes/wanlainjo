@@ -9,10 +9,7 @@
           }}</v-card-title>
 
           <v-card-text class="text-body-2 mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus eveniet nemo, quam earum nostrum asperiores atque
-            sapiente officia error eos assumenda quod laborum eligendi quos
-            repellat, commodi rerum soluta facilis.
+            {{ currentCourse.body }}
           </v-card-text>
         </v-card>
       </v-col>

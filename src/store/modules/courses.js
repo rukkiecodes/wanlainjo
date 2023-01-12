@@ -139,7 +139,149 @@ const state = {
         {
             image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673280089/wanlainjo/courses/front-end_c9bulq.jpg",
             title: 'Front-end Development',
-            body: 'HTML, CSS, Bootstrap, JavaScript(Vanilla), React.js, Vue.js, Firebase',
+            body: 'Become an industry expert and create amazing web resources using front-end web technologies.',
+            subtext: "Front-end Web Development",
+            outline: [
+                {
+                    title: 'Introduction to Web Development and React',
+                    show: true,
+                    breakdown: [
+                        "Intro to Html, CSS and Javascript",
+                        "Creating your first web page with Html css and Javascript"
+                    ]
+                },
+                {
+                    title: 'Introduction to React',
+                    show: false,
+                    breakdown: [
+                        "What is React?",
+                        "Using the create-react-app",
+                        "What are components"
+                    ]
+                },
+                {
+                    title: 'Introduction to React',
+                    show: false,
+                    breakdown: [
+                        "What is React?",
+                        "Using the create-react-app",
+                        "What are components"
+                    ]
+                },
+                {
+                    title: 'State and Props',
+                    show: false,
+                    breakdown: [
+                        "Learn about state which allows you to describe changes to your UI using data.",
+                        "Learn about the fundamentals of the Hooks API that lets you incorporate state in a Function component.",
+                        "Understand how to use props as conduits that allow you to pass data from a parent to a child component."
+                    ]
+                },
+                {
+                    title: 'React Router and Single Page Applications',
+                    show: false,
+                    breakdown: [
+                        "You will learn about React router and its use in designing single page applications. You will also learn about single page applications and use React Router to design single page applications."
+                    ]
+                },
+                {
+                    title: 'React Forms, Flow Architecture and Introduction to Redux',
+                    show: false,
+                    breakdown: [
+                        "In this module you will be introduced to uncontrolled and controlled forms and briefly examine form validation in React applications. You will get an overview of the Flux architecture and introduced to Redux as a way of realizing the flux architecture"
+                    ]
+                },
+                {
+                    title: 'Redux and Client-Server Communication',
+                    show: false,
+                    breakdown: [
+                        "In this module you will explore Redux further including Redux action, combining reducers, and Redux thunk, client-server communication using Fetch and the REST API. You will get a brief introduction to animation in React.",
+                        "You will also learn about testing, building and deploying React applications."
+                    ]
+                },
+            ]
+        },
+        {
+            image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673542033/wanlainjo/courses/fullstack_tgzftp.jpg",
+            title: 'Fullstack Development',
+            body: 'Become a Certified Fullstack Software Developer',
+            subtext: "Build functional software’s and web applications to solve real problems.",
+            outline: [
+                {
+                    title: 'COURSE INTRODUCTION',
+                    show: true,
+                    breakdown: [
+                        "How the internet works",
+                        "Setting up your Integrated Development Enviroment (IDE)",
+                        "Technologies to use",
+                        "The main tool that will be used is Visual Studio Code"
+                    ]
+                },
+                {
+                    title: 'DIVE INTO HTML',
+                    show: false,
+                    breakdown: [
+                        "What is HTML?",
+                        "The structure of an HTML document",
+                        "Starting to fill the structure",
+                        "Images & attributes",
+                        "URLs, Links & iframing",
+                        "Practice Exercise"
+                    ]
+                },
+                {
+                    title: 'INFORMATION ARCHITECTURE IN DESIGNING FOR MOBILE SCREEN',
+                    show: false,
+                    breakdown: [
+                        "Getting started with CSS",
+                        "Starting to make our webpage beautiful: text",
+                        "Colors",
+                        "Classes and ID’s",
+                        "The CSS box model",
+                        "Building a simple layout",
+                        "Polishing our blog post",
+                        "Relative vs Absolute",
+                        "Practice Exercise"
+                    ]
+                },
+                {
+                    title: 'RESPONSIVE WEB DESIGN WITH MEDIA QUERIES & BOOTSRAP 4',
+                    show: false,
+                    breakdown: [
+                        "Bootstrap Installation",
+                        "Responsive Navbar & nav colours",
+                        "Containers, media breakpoint & grid in Bootstrap 4",
+                        "Styling your pages with Icons"
+                    ]
+                },
+                {
+                    title: 'MODERN JAVASCRIPT',
+                    show: false,
+                    breakdown: [
+                        "A brief introduction to Javascript",
+                        "Variables & Data Types",
+                        "Basic Operators",
+                        "DOM Manipulations & events",
+                        "If/else Statements",
+                        "Boolean Logic",
+                        "Arrays",
+                        "Functions (Arrow functions)",
+                        "Practice Exercise"
+                    ]
+                },
+                {
+                    title: 'MONGO-DB WEB FRAME ENGINE',
+                    show: false,
+                    breakdown: [
+                        "Store complex, relational data using Mongoose",
+                        "Implement data validation",
+                        "Implement authentication and authorization",
+                        "Handle and log errors effectively",
+                        "Build features using test driven development",
+                        "Deploy your node app to heroku"
+                    ]
+                }
+            ]
         },
         {
             image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673280092/wanlainjo/courses/php_mrwowz.jpg",
@@ -179,7 +321,89 @@ const state = {
         {
             image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673280090/wanlainjo/courses/digital-marketing_l6qwea.jpg",
             title: 'Digital Marketing',
-            body: 'Morbi in libero blandit lectus cursus ullamcorper.',
+            body: 'Learn modern digital trends & methods to develop key marketing strategies and spur growth for small to large scale businesses.',
+            subtext: "Become a Certified Digital Marketer",
+            outline: [
+                {
+                    title: ' Digital Marketing and SEO',
+                    show: true,
+                    breakdown: [
+                        "Explain what Digital Marketing entail",
+                        "Define segments and the role segmentation plays in digital marketing",
+                        "Identify the relevance of role for different channels for your business and customers",
+                        "Explain how to use channels to market to the right customers at the right time.",
+                        "Building a target persona",
+                        "Define channels that will be used in campaigns and where your approach is paid, earned or owned",
+                        "Content writing",
+                        "Theoretical aspect on how SEO is done"
+                    ]
+                },
+                {
+                    title: 'Content Marketing and Social',
+                    show: false,
+                    breakdown: [
+                        "Explain the impact local SEO has and how to set it up",
+                        "Perform keyword research, analysing search volume and competition",
+                        "Create your own Google Ads campaign",
+                        "Evaluate results and optimize Adwords",
+                        "Review key metrics and KPIs for SEM",
+                        "How to take advantage of video marketing, using Youtube.",
+                        "Learn Twitter marketing and how to leverage the Ads on it.",
+                        "Learn Facebook marketing and how to leverage Ads on it.",
+                        "Learn Instagram marketing and how to leverage the Ads on it."
+                    ]
+                },
+                {
+                    title: 'Marketing Acquisition & Conversion Rate Optimization',
+                    show: false,
+                    breakdown: [
+                        "Landing pages & Lead Generation",
+                        "Review best practices of digital marketing UX",
+                        "Evaluate the design, functionality, and effectiveness of landing pages",
+                        "Develop forms for your business"
+                    ]
+                },
+                {
+                    title: 'Customer Engagement & Retention (Via Email)',
+                    show: false,
+                    breakdown: [
+                        "Plan and prepare lifecycle marketing strategies",
+                        "Learn how to do email Marketing",
+                        "Engage with your customers via email throughout their lifecycle.",
+                        "Plan, execute, and measure email-marketing campaigns",
+                        "Explaining how to create popup form to gain organic followers via email."
+                    ]
+                },
+                {
+                    title: 'Paid Social & Advertising (Paid Search, Adwords & SEM)',
+                    show: false,
+                    breakdown: [
+                        "Outline the process for developing content campaigns.",
+                        "Create a content plan with key messaging",
+                        "Assess which content marketing tactics meet specific marketing and business goals.",
+                        "Determine the key metrics for measuring and optimizing content marketing tactics.",
+                        "Select appropriate influencers for your project and determine your influencer outreach strategy.",
+                        "Curate and modify digital content across your social channels.",
+                        "Determine the role of community management in social media marketing. Identify metrics and KPIs for measuring the impact of social media.",
+                        "Use of CRM (Customer Relationship Management) & Marketing automation tool"
+                    ]
+                },
+                {
+                    title: 'Google Tools',
+                    show: false,
+                    breakdown: [
+                        "Google Analytics",
+                        "Clear understanding of how to leverage the detailed information on Google Analytics",
+                        "Learn how to track a link using Google Analytics",
+                        "Google Search Console",
+                        "In depth tutorial on how to use Google Search Console",
+                        "Google TagManager",
+                        "Explain how to use Google TagManager to track links on your website",
+                        "Structured Data Markup Helper",
+                        "Explore how to use structured data markup helper to boost your local SEO"
+                    ]
+                }
+            ]
         },
         {
             image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673280092/wanlainjo/courses/robotics_dc8vvx.jpg",

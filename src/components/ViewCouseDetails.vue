@@ -55,7 +55,7 @@
                           >Month</span
                         >
                       </template>
-                      <v-card class="elevation-2" width="500">
+                      <v-card class="elevation-2" width="500" max-width="100%">
                         <v-list>
                           <v-list-item :title="outline.title">
                             <template v-slot:append>
