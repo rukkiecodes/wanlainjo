@@ -22,6 +22,9 @@
           <v-list-item density="compact" to="/events">
             <v-list-item-title>Events</v-list-item-title>
           </v-list-item>
+          <v-list-item density="compact" to="/community">
+            <v-list-item-title>Community</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-btn>
