@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation grow color="indigo-darken-4">
+    <v-bottom-navigation grow elevation="16" color="indigo-darken-4">
         <v-btn to="/" value="home">
             <v-icon>mdi-home</v-icon>
 
