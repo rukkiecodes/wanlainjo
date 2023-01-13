@@ -100,6 +100,10 @@ export default {
         this.snackbar.text = "You have successfully RSVP'd";
         this.snackbar.color = "success";
         this.loading = false;
+
+        this.name = "";
+        this.email = "";
+        this.phone = "";
       }
     },
   },
