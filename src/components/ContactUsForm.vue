@@ -48,7 +48,7 @@ export default {
             },
             {
                 title: 'Phone Number',
-                body: '010-020-0340'
+                body: '+2348165194182'
             },
             {
                 title: 'Office Address',
