@@ -58,7 +58,7 @@
           </v-card-text>
         </v-card>
 
-        <v-row dense>
+        <v-row dense v-if="!currentEvent.open">
           <v-col
             v-for="(image, i) in currentEvent.gallery"
             :key="i"
@@ -73,10 +73,10 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-dialog v-model="dialog" scrollable width="500">
+    <v-dialog v-model="dialog" scrollable width="750">
       <v-card>
         <v-card-text class="pa-0">
-          <v-img :src="image" />
+          <v-img cover :src="image" />
         </v-card-text>
         <v-card-actions>
           <v-btn color="indigo" class="text-capitalize" @click="dialog = false" block>Close</v-btn>

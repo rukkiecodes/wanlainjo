@@ -4,7 +4,6 @@ const state = {
             title: 'Leveraging the Tch space',
             collection: 'evenRegistration',
             open: false,
-            dialog: false,
             description: 'This event is for those who are interested in learning how to leverage the tech space to build a career in tech',
             image: 'https://res.cloudinary.com/rukkiecodes/image/upload/v1673565438/wanlainjo/events/leveraging_the_tech_space_afz954.jpg',
             gallery: [
