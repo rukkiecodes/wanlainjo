@@ -77,10 +77,6 @@ export default {
     this.currentEvent = currentEvent;
   },
 
-  mounted() {
-    console.log({ ...this.currentEvent });
-  },
-
   methods: {
     async rsvpForThisEvent() {
       if (this.name == "" || this.email == "" || this.phone == "") {

@@ -20,6 +20,11 @@ const state = {
             title: 'Contact',
             icon: 'mdi-phone',
             to: '/contact'
+        },
+        {
+            title: 'Events',
+            icon: 'mdi-party-popper',
+            to: '/events'
         }
     ]
 }
