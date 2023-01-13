@@ -14,6 +14,17 @@
       class="text-body-1 ml-2 hidden-xs"
       >{{ route.title }}</v-btn
     >
+    <v-btn variant="text" class="text-body-1 ml-2 hidden-xs">
+      Meetings
+
+      <v-menu activator="parent" open-on-hover>
+        <v-list density="compact" class="py-0">
+          <v-list-item density="compact" to="/events">
+            <v-list-item-title>Events</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-btn>
     <v-btn to="/register" class="bg-indigo-darken-4 ml-4">Register</v-btn>
     <v-app-bar-nav-icon
       @click="drawer.drawer = !drawer.drawer"
