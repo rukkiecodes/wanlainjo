@@ -25,6 +25,11 @@ const state = {
             title: 'Events',
             icon: 'mdi-party-popper',
             to: '/events'
+        },
+        {
+            title: 'Our Communities',
+            icon: 'mdi-account-group',
+            to: '/community'
         }
     ]
 }
