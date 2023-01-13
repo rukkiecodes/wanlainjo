@@ -18,7 +18,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="7">
-        <v-card flat>
+        <v-card flat v-if="currentEvent.open">
           <v-card-title>RSVP Now</v-card-title>
           <v-card-text>
             <v-text-field
@@ -51,8 +51,38 @@
             >
           </v-card-actions>
         </v-card>
+        <v-card flat v-else>
+          <v-card-title>{{ currentEvent.title }}</v-card-title>
+          <v-card-text>
+            {{ currentEvent.description }}
+          </v-card-text>
+        </v-card>
+
+        <v-row dense>
+          <v-col
+            v-for="(image, i) in currentEvent.gallery"
+            :key="i"
+            cols="12"
+            sm="6"
+            md="4"
+          >
+            <v-card style="cursor: pointer" @click="setDialog(image)">
+              <v-img :src="image" />
+            </v-card>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
+    <v-dialog v-model="dialog" scrollable width="500">
+      <v-card>
+        <v-card-text class="pa-0">
+          <v-img :src="image" />
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="indigo" class="text-capitalize" @click="dialog = false" block>Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
   
@@ -67,6 +97,8 @@ export default {
     email: "",
     phone: "",
     loading: false,
+    dialog: false,
+    image: null,
   }),
 
   created() {
@@ -101,6 +133,11 @@ export default {
         this.email = "";
         this.phone = "";
       }
+    },
+
+    setDialog(image) {
+      this.dialog = true;
+      this.image = image;
     },
   },
 

@@ -11,10 +11,17 @@
       :key="i"
       :to="route.to"
       variant="text"
-      class="text-body-1 ml-2 hidden-xs"
+      class="text-body-1 hidden-sm"
+      :class="
+        route.title == 'Events'
+          ? 'd-none'
+          : route.title == 'Communities'
+          ? 'd-none'
+          : 'd-flex'
+      "
       >{{ route.title }}</v-btn
     >
-    <v-btn variant="text" class="text-body-1 ml-2 hidden-xs">
+    <v-btn variant="text" class="text-body-1 hidden-xs">
       Meetings
 
       <v-menu activator="parent" open-on-hover>
@@ -31,7 +38,7 @@
     <v-btn to="/register" class="bg-indigo-darken-4 ml-4">Register</v-btn>
     <v-app-bar-nav-icon
       @click="drawer.drawer = !drawer.drawer"
-      class="hidden-sm-and-up ml-2"
+      class="hidden-md-and-up ml-2"
     />
   </v-app-bar>
 </template>

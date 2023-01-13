@@ -27,7 +27,7 @@ const state = {
             to: '/events'
         },
         {
-            title: 'Our Communities',
+            title: 'Communities',
             icon: 'mdi-account-group',
             to: '/community'
         }
