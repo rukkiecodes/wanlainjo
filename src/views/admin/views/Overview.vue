@@ -19,8 +19,8 @@
                 cols="8"
                 class="d-flex flex-column justify-center align-end"
               >
-                <h3 class="font-weight-bold text-h6 mb-0 text">{{ item.title }}</h3>
-                <h3 class="font-weight-bold mb-0 text">{{ item.title == 'Students' ? (countStudents.count).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : item.title == 'Courses' ? 100 : item.title == 'Instructors' ? 100 : 0 }}</h3>
+                <h3 class="font-weight-bold text-h6 mb-0 text-green-lighten-1">{{ item.title }}</h3>
+                <h3 class="font-weight-bold mb-0 text-green-lighten-1">{{ item.title == 'Students' ? (countStudents.count).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : item.title == 'Courses' ? 100 : item.title == 'Instructors' ? 100 : 0 }}</h3>
               </v-col>
             </v-row>
           </v-card-text>
@@ -73,9 +73,5 @@ export default {
 .icon {
   font-size: 2rem;
   color: #00dc82;
-}
-
-.text {
-  color: #040d21;
 }
 </style>

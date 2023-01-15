@@ -1,15 +1,17 @@
 <template>
   <v-app-bar color="transparent" :order="1" flat>
-    <v-app-bar-title class="text font-weight-light">
+    <v-app-bar-title class="text-green-lighten-1 font-weight-light">
       wanlainjo <span class="font-weight-bold">Tech Hub</span>
     </v-app-bar-title>
 
     <v-spacer />
-    <v-app-bar-nav-icon
+    <v-btn
       @click="leftDrawer.drawer = !leftDrawer.drawer"
       icon
-      class="text hidden-lg-and-up"
-    ></v-app-bar-nav-icon>
+      class="hidden-lg-and-up"
+    >
+      <v-icon class="text-green-lighten-1">mdi-menu</v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
 

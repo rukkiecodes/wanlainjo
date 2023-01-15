@@ -4,8 +4,8 @@
       <v-list-item
         prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
       >
-        <v-list-item-title class="text text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
-        <v-list-item-subtitle class="text text-caption">Admin</v-list-item-subtitle>
+        <v-list-item-title class="text-green-lighten-1 text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
+        <v-list-item-subtitle class="text-green-lighten-1 text-caption">Admin</v-list-item-subtitle>
       </v-list-item>
     </v-list>
 
@@ -20,7 +20,7 @@
           <i :class="route.icon" class="drawerIcon mr-3"></i>
         </template>
 
-        <v-list-item-title class="text text-caption">{{
+        <v-list-item-title class="text-green-lighten-1 text-caption">{{
           route.title
         }}</v-list-item-title>
       </v-list-item>
@@ -79,10 +79,6 @@ export default {
 </script>
 
 <style>
-.text {
-  color: #00dc82;
-}
-
 .drawerIcon {
   color: #00dc82;
   margin: 0;
