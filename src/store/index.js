@@ -12,6 +12,9 @@ import events from './modules/website/events'
 // admin
 import leftDrawer from './modules/admin/leftDrawer'
 
+// countStudents
+import countStudents from './modules/admin/countStudents'
+
 export default createStore({
     strict: false,
     modules: {
@@ -22,6 +25,9 @@ export default createStore({
         events,
 
         // admin
-        leftDrawer
+        leftDrawer,
+
+        // countStudents
+        countStudents
     },
 })

@@ -1,14 +1,13 @@
 <template>
-  <v-navigation-drawer :color="color" border="0">
+  <v-navigation-drawer v-model="leftDrawer.drawer" :color="color" border="0">
     <v-list>
       <v-list-item
         prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-        title="Sandra Adams"
-        subtitle="sandra_a88@gmailcom"
-      ></v-list-item>
+      >
+        <v-list-item-title class="text text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
+        <v-list-item-subtitle class="text text-caption">Admin</v-list-item-subtitle>
+      </v-list-item>
     </v-list>
-
-    <v-divider></v-divider>
 
     <v-list density="compact" nav>
       <v-list-item
@@ -31,10 +30,33 @@
 
 <script>
 import { useDisplay } from "vuetify";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
+  created() {
+    this.drawerVisibility();
+  },
+  methods: {
+    drawerVisibility() {
+      switch (useDisplay().name.value) {
+        case "xs":
+          return (this.leftDrawer.drawer = false);
+        case "sm":
+          return (this.leftDrawer.drawer = false);
+        case "md":
+          return (this.leftDrawer.drawer = false);
+        case "lg":
+          return (this.leftDrawer.drawer = true);
+        case "xl":
+          return (this.leftDrawer.drawer = true);
+        case "xxl":
+          return (this.leftDrawer.drawer = true);
+      }
+    },
+  },
+
   computed: {
     ...mapGetters(["leftDrawerArray"]),
+    ...mapState(["leftDrawer"]),
     // eslint-disable-next-line vue/return-in-computed-property
     color() {
       switch (useDisplay().name.value) {

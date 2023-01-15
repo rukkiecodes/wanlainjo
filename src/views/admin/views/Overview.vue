@@ -20,7 +20,7 @@
                 class="d-flex flex-column justify-center align-end"
               >
                 <h3 class="font-weight-bold text-h6 mb-0 text">{{ item.title }}</h3>
-                <h3 class="font-weight-bold mb-0 text">100</h3>
+                <h3 class="font-weight-bold mb-0 text">{{ item.title == 'Students' ? (countStudents.count).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : item.title == 'Courses' ? 100 : item.title == 'Instructors' ? 100 : 0 }}</h3>
               </v-col>
             </v-row>
           </v-card-text>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   data: () => ({
     items: [
@@ -38,22 +39,26 @@ export default {
         title: "Students",
         icon: "las la-user-graduate",
         count: 100,
-        to: '/students'
+        to: '/admin/students'
       },
       {
         title: "Courses",
         icon: "las la-school",
         count: 100,
-        to: '/courses'
+        to: '/admin/courses'
       },
       {
         title: "Instructors",
         icon: "las la-chalkboard-teacher",
         count: 100,
-        to: '/instructors'
+        to: '/admin/instructors'
       },
     ],
   }),
+
+  computed: {
+    ...mapState(["countStudents"])
+  }
 };
 </script>
 

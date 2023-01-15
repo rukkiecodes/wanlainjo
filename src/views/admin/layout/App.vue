@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import AppBar from "./AppBar.vue";
 import LeftDrawer from "./LeftDrawer.vue";
 export default {
@@ -30,8 +31,14 @@ export default {
         circle.style.left = left + "px";
         circle.style.top = top + "px";
       });
+
+      this.countStudents()
     });
   },
+
+  methods: {
+    ...mapActions(["countStudents"])
+  }
 };
 </script>
 

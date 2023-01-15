@@ -9,17 +9,17 @@ const state = {
         {
             title: 'Students',
             icon: 'las la-user-graduate',
-            to: '/students'
+            to: '/admin/students'
         },
         {
             title: 'Courses',
             icon: 'las la-school',
-            to: '/courses'
+            to: '/admin/courses'
         },
         {
             title: 'Instructors',
             icon: 'las la-chalkboard-teacher',
-            to: '/instructors'
+            to: '/admin/instructors'
         },
     ]
 }
