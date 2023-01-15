@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import ContactUsForm from '@/components/ContactUsForm.vue'
-import Heading from '@/components/Heading.vue'
+import ContactUsForm from '../components/ContactUsForm.vue'
+import Heading from '../components/Heading.vue'
 export default {
     data: () => ({
         communities: [

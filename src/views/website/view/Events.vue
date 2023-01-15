@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import ContactUsForm from '@/components/ContactUsForm.vue'
-import Events from '@/components/Events.vue'
+import ContactUsForm from '../components/ContactUsForm.vue'
+import Events from '../components/Events.vue'
 export default {
     components: {
         ContactUsForm,

@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import ContactUsForm from "@/components/ContactUsForm.vue";
+import ContactUsForm from "../components/ContactUsForm.vue";
 export default {
   data: () => ({
     tab: null,

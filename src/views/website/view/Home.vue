@@ -178,11 +178,11 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue";
-import Courses from "@/components/Courses.vue";
-import JoinCommunity from "@/components/JoinCommunity.vue";
-import Bootcamp from "@/components/Bootcamp.vue";
-import ContactUsForm from "@/components/ContactUsForm.vue";
+import Heading from "../components/Heading.vue";
+import Courses from "../components/Courses.vue";
+import JoinCommunity from "../components/JoinCommunity.vue";
+import Bootcamp from "../components/Bootcamp.vue";
+import ContactUsForm from "../components/ContactUsForm.vue";
 export default {
   data: () => ({
     acordions: [

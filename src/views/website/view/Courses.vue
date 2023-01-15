@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import ContactUsForm from '@/components/ContactUsForm.vue'
-import Courses from '@/components/Courses.vue'
+import ContactUsForm from '../components/ContactUsForm.vue'
+import Courses from '../components/Courses.vue'
 export default {
     components: {
         ContactUsForm,

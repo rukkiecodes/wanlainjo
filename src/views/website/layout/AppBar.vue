@@ -1,7 +1,7 @@
 <template>
   <v-app-bar class="pr-0 pr-sm-4" flat>
     <v-app-bar-title>
-      <v-img src="@/assets/images/logo.png" width="150" />
+      <v-img src="https://res.cloudinary.com/rukkiecodes/image/upload/v1673741499/wanlainjo/logo_rwijky.png" width="150" />
     </v-app-bar-title>
 
     <v-spacer />
@@ -11,13 +11,13 @@
       :key="i"
       :to="route.to"
       variant="text"
-      class="text-body-1 hidden-sm"
+      class="text-body-2 hidden-sm"
       :class="
         route.title == 'Events'
           ? 'd-none'
           : route.title == 'Communities'
           ? 'd-none'
-          : 'd-flex'
+          : 'd-flex ml-2'
       "
       >{{ route.title }}</v-btn
     >

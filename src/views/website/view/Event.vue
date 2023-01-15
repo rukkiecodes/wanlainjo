@@ -73,14 +73,11 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-dialog v-model="dialog" scrollable width="750">
+    <v-dialog v-model="dialog" scrollable width="1000">
       <v-card>
-        <v-card-text class="pa-0">
+        <v-card-text class="pa-0 overflow-hidden" style="max-height: 700px;">
           <v-img cover :src="image" />
         </v-card-text>
-        <v-card-actions>
-          <v-btn color="indigo" class="text-capitalize" @click="dialog = false" block>Close</v-btn>
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>

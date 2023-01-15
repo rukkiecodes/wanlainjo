@@ -1,57 +1,11 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
+import admin from '@/views/admin/routes'
+import website from '@/views/website/routes'
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/home/Home.vue'),
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('@/views/about/About.vue'),
-  },
-  {
-    path: '/community',
-    name: 'community',
-    component: () => import('@/views/community/Community.vue'),
-  },
-  {
-    path: '/courses',
-    name: 'courses',
-    component: () => import('@/views/courses/Courses.vue'),
-  },
-  {
-    path: '/register/:title',
-    name: 'courseRegister',
-    component: () => import('@/views/courseRegister/Register.vue'),
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => import('@/views/contact/Contact.vue'),
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: () => import('@/views/register/Register.vue'),
-  },
-  {
-    path: '/course/:title',
-    name: 'course',
-    component: () => import('@/views/course/Course.vue'),
-  },
-  {
-    path: '/events',
-    name: 'events',
-    component: () => import('@/views/events/Events.vue'),
-  },
-  {
-    path: '/event/:title',
-    name: 'event',
-    component: () => import('@/views/event/Event.vue'),
-  },
+  website
+  // ...admin
 ]
 
 const router = createRouter({
