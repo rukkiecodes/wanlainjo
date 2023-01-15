@@ -4,8 +4,8 @@ import admin from '@/views/admin/routes'
 import website from '@/views/website/routes'
 
 const routes = [
-  website
-  // ...admin
+  website,
+  admin
 ]
 
 const router = createRouter({

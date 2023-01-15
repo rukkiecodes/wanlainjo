@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashBoardBackground {
+  background-color: #040D21;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.dashBoardBackground .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  z-index: 0;
+  background-color: #00DC82;
+}
+.dashBoardBackground .app {
+  position: relative;
+  height: 100vh;
+}
+.dashBoardBackground::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  z-index: 1;
+}/*# sourceMappingURL=dashboard.css.map */
