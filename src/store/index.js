@@ -3,11 +3,14 @@ import {
 } from 'vuex'
 
 // MODULES
-import drawer from './modules/drawer'
-import courses from './modules/courses'
-import form from './modules/form'
+import drawer from './modules/website/drawer'
+import courses from './modules/website/courses'
+import form from './modules/website/form'
 import snackbar from './modules/snackbar'
-import events from './modules/events'
+import events from './modules/website/events'
+
+// admin
+import leftDrawer from './modules/admin/leftDrawer'
 
 export default createStore({
     strict: false,
@@ -16,6 +19,9 @@ export default createStore({
         courses,
         form,
         snackbar,
-        events
+        events,
+
+        // admin
+        leftDrawer
     },
 })

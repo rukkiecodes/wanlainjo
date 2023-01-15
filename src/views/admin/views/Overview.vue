@@ -1,6 +1,76 @@
 <template>
-  <div class="overview">
-    <h1>Overview</h1>
-    <p>Overview page</p>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col v-for="(item, i) in items" :key="i" cols="12" md="4">
+        <v-card class="card rounded-lg" color="transparent" flat :to="item.to">
+          <v-card-text>
+            <v-row justify="space-between">
+              <v-col cols="4">
+                <v-avatar
+                  color="#040D21"
+                  size="50"
+                  rounded="0"
+                  class="rounded-lg"
+                >
+                  <i :class="item.icon" class="icon"></i>
+                </v-avatar>
+              </v-col>
+              <v-col
+                cols="8"
+                class="d-flex flex-column justify-center align-end"
+              >
+                <h3 class="font-weight-bold text-h6 mb-0 text">{{ item.title }}</h3>
+                <h3 class="font-weight-bold mb-0 text">100</h3>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    items: [
+      {
+        title: "Students",
+        icon: "las la-user-graduate",
+        count: 100,
+        to: '/students'
+      },
+      {
+        title: "Courses",
+        icon: "las la-school",
+        count: 100,
+        to: '/courses'
+      },
+      {
+        title: "Instructors",
+        icon: "las la-chalkboard-teacher",
+        count: 100,
+        to: '/instructors'
+      },
+    ],
+  }),
+};
+</script>
+
+<style>
+.card {
+  background: rgba(0, 220, 130, 0.25) !important;
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #00dc82;
+}
+
+.text {
+  color: #040d21;
+}
+</style>

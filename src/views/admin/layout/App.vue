@@ -3,8 +3,7 @@
     <div class="circle"></div>
     <v-layout class="app">
       <AppBar />
-
-      <v-navigation-drawer :color="color" border="0"></v-navigation-drawer>
+      <LeftDrawer />
 
       <v-main class="main">
         <router-view />
@@ -14,11 +13,12 @@
 </template>
 
 <script>
-import { useDisplay } from "vuetify";
 import AppBar from "./AppBar.vue";
+import LeftDrawer from "./LeftDrawer.vue";
 export default {
   components: {
     AppBar,
+    LeftDrawer,
   },
 
   mounted() {
@@ -31,26 +31,6 @@ export default {
         circle.style.top = top + "px";
       });
     });
-  },
-
-  computed: {
-    // eslint-disable-next-line vue/return-in-computed-property
-    color() {
-      switch (useDisplay().name.value) {
-        case "xs":
-          return "white";
-        case "sm":
-          return "white";
-        case "md":
-          return "white";
-        case "lg":
-          return "transparent";
-        case "xl":
-          return "transparent";
-        case "xxl":
-          return "transparent";
-      }
-    },
   },
 };
 </script>
