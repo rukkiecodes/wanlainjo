@@ -12,16 +12,9 @@
       :to="route.to"
       variant="text"
       class="text-body-2 hidden-sm"
-      :class="
-        route.title == 'Events'
-          ? 'd-none'
-          : route.title == 'Communities'
-          ? 'd-none'
-          : 'd-flex ml-2'
-      "
       >{{ route.title }}</v-btn
     >
-    <v-btn variant="text" class="text-body-1 hidden-xs">
+    <v-btn variant="text" class="text-body-1 hidden-sm">
       Meetings
 
       <v-menu activator="parent" open-on-hover>
