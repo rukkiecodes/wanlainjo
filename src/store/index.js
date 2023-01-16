@@ -14,6 +14,7 @@ import leftDrawer from './modules/admin/leftDrawer'
 
 // countStudents
 import countStudents from './modules/admin/countStudents'
+import getAllStudents from './modules/admin/getAllStudents'
 
 export default createStore({
     strict: false,
@@ -28,6 +29,7 @@ export default createStore({
         leftDrawer,
 
         // countStudents
-        countStudents
+        countStudents,
+        getAllStudents
     },
 })

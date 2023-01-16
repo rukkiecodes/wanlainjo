@@ -1,6 +1,6 @@
 <template>
   <div class="dashBoardBackground">
-    <div class="circle"></div>
+    <div class="circles"></div>
     <v-layout class="app">
       <AppBar />
       <LeftDrawer />
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 import AppBar from "./AppBar.vue";
 import LeftDrawer from "./LeftDrawer.vue";
 export default {
@@ -24,21 +24,14 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      document.addEventListener("mousemove", (e) => {
-        let circle = document.querySelector(".circle");
-        let left = e.offsetX;
-        let top = e.offsetY;
-        circle.style.left = left + "px";
-        circle.style.top = top + "px";
-      });
-
-      this.countStudents()
+      this.countStudents();
+      this.fetchStudents();
     });
   },
 
   methods: {
-    ...mapActions(["countStudents"])
-  }
+    ...mapActions(["countStudents", "fetchStudents"]),
+  },
 };
 </script>
 

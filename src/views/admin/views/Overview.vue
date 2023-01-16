@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .card {
   background: rgba(0, 220, 130, 0.25) !important;
   backdrop-filter: blur(6px);

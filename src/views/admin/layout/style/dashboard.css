@@ -8,22 +8,42 @@
   overflow: hidden;
   position: relative;
 }
-.dashBoardBackground .circle {
+.dashBoardBackground .circles {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.dashBoardBackground .circles::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1000px;
   height: 1000px;
-  max-width: 50%;
-  max-height: 50%;
+  background-color: rgba(0, 220, 128, 0.322);
   border-radius: 50%;
-  z-index: 0;
+}
+.dashBoardBackground .circles::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
   background-color: #00DC82;
+  border-radius: 50%;
 }
 .dashBoardBackground .app {
   position: relative;
   height: 100vh;
+}
+.dashBoardBackground .app .main {
+  overflow-y: auto;
+}
+.dashBoardBackground .app .main::-webkit-scrollbar {
+  width: 0px;
 }
 .dashBoardBackground::after {
   content: "";
