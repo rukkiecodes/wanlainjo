@@ -11,10 +11,10 @@
       :key="i"
       :to="route.to"
       variant="text"
-      class="text-body-2 hidden-sm"
+      class="text-body-2 hidden-sm-and-down"
       >{{ route.title }}</v-btn
     >
-    <v-btn variant="text" class="text-body-1 hidden-sm">
+    <v-btn variant="text" class="text-body-1 hidden-sm-and-down">
       Meetings
 
       <v-menu activator="parent" open-on-hover>
