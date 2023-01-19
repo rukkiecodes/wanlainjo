@@ -26,6 +26,22 @@ export default {
             ]
         },
         {
+            path: 'deletedStudents',
+            name: 'admin.deletedStudents',
+            component: () => import("@/views/admin/views/deletedStudents/View.vue"),
+
+            children: [
+                {
+                    path: '',
+                    component: () => import("@/views/admin/views/deletedStudents/Students.vue"),
+                },
+                {
+                    path: ':student',
+                    component: () => import("@/views/admin/views/deletedStudents/ViewStudent.vue"),
+                }
+            ]
+        },
+        {
             path: 'courses',
             name: 'admin.courses',
             component: () => import("@/views/admin/views/Courses.vue"),

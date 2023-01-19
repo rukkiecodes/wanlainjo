@@ -23,11 +23,12 @@ export default {
     this.$nextTick(() => {
       this.countStudents();
       this.fetchStudents();
+      this.fetchDeletedStudents();
     });
   },
 
   methods: {
-    ...mapActions(["countStudents", "fetchStudents"]),
+    ...mapActions(["countStudents", "fetchStudents", "fetchDeletedStudents"]),
   },
 };
 </script>

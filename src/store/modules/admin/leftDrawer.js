@@ -12,6 +12,11 @@ const state = {
             to: '/admin/students'
         },
         {
+            title: 'Deleted Students',
+            icon: 'las la-trash',
+            to: '/admin/deletedStudents'
+        },
+        {
             title: 'Courses',
             icon: 'las la-school',
             to: '/admin/courses'
