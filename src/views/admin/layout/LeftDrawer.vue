@@ -4,8 +4,8 @@
       <v-list-item
         prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
       >
-        <v-list-item-title class="text-green-lighten-1 text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
-        <v-list-item-subtitle class="text-green-lighten-1 text-caption">Admin</v-list-item-subtitle>
+        <v-list-item-title class="text-indigo-lighten-1 text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
+        <v-list-item-subtitle class="text-indigo-lighten-1 text-caption">Admin</v-list-item-subtitle>
       </v-list-item>
     </v-list>
 
@@ -20,7 +20,7 @@
           <i :class="route.icon" class="drawerIcon mr-3"></i>
         </template>
 
-        <v-list-item-title class="text-green-lighten-1 text-caption">{{
+        <v-list-item-title class="text-indigo-lighten-1 text-caption">{{
           route.title
         }}</v-list-item-title>
       </v-list-item>
@@ -61,11 +61,11 @@ export default {
     color() {
       switch (useDisplay().name.value) {
         case "xs":
-          return "#040d21";
+          return "white";
         case "sm":
-          return "#040d21";
+          return "white";
         case "md":
-          return "#040d21";
+          return "white";
         case "lg":
           return "transparent";
         case "xl":
@@ -80,14 +80,14 @@ export default {
 
 <style>
 .drawerIcon {
-  color: #00dc82;
+  color: #5C6BC0;
   margin: 0;
   padding: 0;
   font-size: 1.2em;
 }
 
 .bg {
-  background: rgba(4, 13, 33, 0.25) !important;
+  background: rgba(4, 13, 33, 0) !important;
   backdrop-filter: blur(6px) !important;
   border-radius: 10px !important;
 }

@@ -12,15 +12,29 @@
                   rounded="0"
                   class="rounded-lg"
                 >
-                  <i :class="item.icon" class="icon"></i>
+                  <i :class="item.icon" class="icon text-white"></i>
                 </v-avatar>
               </v-col>
               <v-col
                 cols="8"
                 class="d-flex flex-column justify-center align-end"
               >
-                <h3 class="font-weight-bold text-h6 mb-0 text-green-lighten-1">{{ item.title }}</h3>
-                <h3 class="font-weight-bold mb-0 text-green-lighten-1">{{ item.title == 'Students' ? (countStudents.count).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : item.title == 'Courses' ? 100 : item.title == 'Instructors' ? 100 : 0 }}</h3>
+                <h3 class="font-weight-bold text-h6 mb-0 text-indigo-lighten-1">
+                  {{ item.title }}
+                </h3>
+                <h3 class="font-weight-bold mb-0 text-indigo-lighten-1">
+                  {{
+                    item.title == "Students"
+                      ? countStudents.count
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      : item.title == "Courses"
+                      ? 100
+                      : item.title == "Instructors"
+                      ? 100
+                      : 0
+                  }}
+                </h3>
               </v-col>
             </v-row>
           </v-card-text>
@@ -31,7 +45,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 export default {
   data: () => ({
     items: [
@@ -39,32 +53,32 @@ export default {
         title: "Students",
         icon: "las la-user-graduate",
         count: 100,
-        to: '/admin/students'
+        to: "/admin/students",
       },
       {
         title: "Courses",
         icon: "las la-school",
         count: 100,
-        to: '/admin/courses'
+        to: "/admin/courses",
       },
       {
         title: "Instructors",
         icon: "las la-chalkboard-teacher",
         count: 100,
-        to: '/admin/instructors'
+        to: "/admin/instructors",
       },
     ],
   }),
 
   computed: {
-    ...mapState(["countStudents"])
-  }
+    ...mapState(["countStudents"]),
+  },
 };
 </script>
 
 <style scoped>
 .card {
-  background: rgba(0, 220, 130, 0.25) !important;
+  background: rgba(92, 107, 192, 0.251) !important;
   backdrop-filter: blur(6px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
@@ -72,6 +86,5 @@ export default {
 
 .icon {
   font-size: 2rem;
-  color: #00dc82;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <v-app-bar color="transparent" :order="1" flat>
-    <v-app-bar-title class="text-green-lighten-1 font-weight-light">
+  <v-app-bar color="white" :order="1" flat>
+    <v-app-bar-title class="text-indigo-lighten-1 font-weight-light">
       wanlainjo <span class="font-weight-bold">Tech Hub</span>
     </v-app-bar-title>
 

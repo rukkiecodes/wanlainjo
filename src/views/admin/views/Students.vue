@@ -8,15 +8,15 @@
         sm="6"
         md="4"
       >
-        <v-card class="card" flat>
+        <v-card class="rounded-lg">
           <v-card-text>
             <v-list
               density="compact"
               rounded="lg"
               color="transparent"
-              class="darkCard"
+              class="px-0"
             >
-              <v-list-item color="transparent">
+              <v-list-item color="transparent" class="px-0">
                 <template v-slot:prepend>
                   <v-badge
                     dot
@@ -29,7 +29,7 @@
                 </template>
 
                 <v-list-item-title
-                  class="text-green-lighten-1 font-weight-bold ml-4"
+                  class="text-indigo-lighten-1 font-weight-bold ml-4"
                   >{{ student?.studentsname }}</v-list-item-title
                 >
               </v-list-item>
@@ -63,7 +63,13 @@
             </v-row>
           </v-card-text>
           <v-card-actions>
-            <v-btn block class="text-capitalize"> View Student Details </v-btn>
+            <v-btn
+              :to="`/admin/students/${student?.id}`"
+              block
+              class="text-capitalize bg-indigo-lighten-5"
+            >
+              View Student Details
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -79,17 +85,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.card {
-  background: rgba(0, 220, 130, 0.25) !important;
-  backdrop-filter: blur(6px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
-
-.darkCard {
-  background: #040d2186;
-  backdrop-filter: blur(6px);
-}
-</style>

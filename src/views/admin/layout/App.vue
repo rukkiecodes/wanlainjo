@@ -1,15 +1,12 @@
 <template>
-  <div class="dashBoardBackground">
-    <div class="circles"></div>
-    <v-layout class="app">
-      <AppBar />
-      <LeftDrawer />
+  <v-layout>
+    <AppBar />
+    <LeftDrawer />
 
-      <v-main class="main">
-        <router-view />
-      </v-main>
-    </v-layout>
-  </div>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-layout>
 </template>
 
 <script>
