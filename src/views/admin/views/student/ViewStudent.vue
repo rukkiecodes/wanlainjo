@@ -201,7 +201,7 @@
 <script>
 import { doc, getDoc, updateDoc } from "@firebase/firestore";
 import { db } from "@/plugins/firebase";
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   data: () => ({
     student: {},
@@ -215,6 +215,8 @@ export default {
   },
 
   methods: {
+    ...mapActions(["fetchStudents"]),
+    
     async getStudent() {
       let student = await (
         await getDoc(doc(db, "registration", this.$route.params.student))
@@ -244,6 +246,7 @@ export default {
       this.snackbar.text = "Student deleted successfully";
       this.snackbar.color = "success";
       this.getStudent()
+      this.fetchStudents()
     },
   },
 
