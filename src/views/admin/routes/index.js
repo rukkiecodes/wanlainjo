@@ -17,11 +17,11 @@ export default {
             children: [
                 {
                     path: '',
-                    component: () => import("@/views/admin/views/Students.vue"),
+                    component: () => import("@/views/admin/views/student/Students.vue"),
                 },
                 {
                     path: ':student',
-                    component: () => import("@/views/admin/views/ViewStudent.vue"),
+                    component: () => import("@/views/admin/views/student/ViewStudent.vue"),
                 }
             ]
         },

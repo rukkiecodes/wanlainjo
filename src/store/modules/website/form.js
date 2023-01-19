@@ -299,7 +299,7 @@ const actions = {
         const uploadTask = uploadBytesResumable(ref(storage, link), this.state.form.image)
 
         uploadTask.on('state_changed',
-            snapshot => { },
+            snapshot => snapshot,
             error => console.log(error),
             () => {
                 getDownloadURL(uploadTask.snapshot.ref)
@@ -307,6 +307,8 @@ const actions = {
                         await addDoc(collection(db, 'registration'), {
                             ...this.state.form.credentials,
                             displayPicture: downloadURL,
+                            imageLink: link,
+                            status: 'active',
                             timestamp: serverTimestamp()
                         })
                         this.state.form.loading = false

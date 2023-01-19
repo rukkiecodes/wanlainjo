@@ -24,9 +24,9 @@
               <v-icon class="mr-2 text-indigo">mdi-pencil</v-icon>
               <span class="text-capitalize text-indigo">Edit</span>
             </v-btn>
-            <v-btn>
+            <v-btn @click="deleteStudent" :loading="deleteLoading">
               <v-icon class="mr-2 text-red">mdi-delete</v-icon>
-              <span class="text-capitalize text-red">Delete</span>
+              <span class="text-capitalize text-red">{{ student?.status == 'deleted' ? 'Undo Delete' : 'Delete' }}</span>
             </v-btn>
             <v-btn>
               <v-icon class="mr-2 text-green">mdi-check-all</v-icon>
@@ -127,7 +127,7 @@
             <v-card-title>Prefared courses</v-card-title>
             <v-card-text>
               <v-row>
-                <v-col cols="12" sm="6" md="4">
+                <v-col v-if="student?.course1?.course" cols="12" sm="6" md="4">
                   <v-card>
                     <v-card-title class="text-h6">First choice</v-card-title>
                     <v-card-text class="d-flex flex-column">
@@ -141,7 +141,7 @@
                     </v-card-text>
                   </v-card>
                 </v-col>
-                <v-col cols="12" sm="6" md="4">
+                <v-col v-if="student?.course2?.course" cols="12" sm="6" md="4">
                   <v-card>
                     <v-card-title class="text-h6">Second choice</v-card-title>
                     <v-card-text class="d-flex flex-column">
@@ -155,7 +155,7 @@
                     </v-card-text>
                   </v-card>
                 </v-col>
-                <v-col cols="12" sm="6" md="4">
+                <v-col v-if="student?.course3?.course" cols="12" sm="6" md="4">
                   <v-card>
                     <v-card-title class="text-h6">Third choice</v-card-title>
                     <v-card-text class="d-flex flex-column">
@@ -184,7 +184,7 @@
       Edit
     </v-btn>
 
-    <v-btn value="delete">
+    <v-btn @click="deleteStudent" :loading="deleteLoading" value="delete">
       <v-icon>mdi-delete</v-icon>
 
       Delete
@@ -199,11 +199,13 @@
 </template>
 
 <script>
-import { doc, getDoc } from "@firebase/firestore";
+import { doc, getDoc, updateDoc } from "@firebase/firestore";
 import { db } from "@/plugins/firebase";
+import { mapState } from "vuex";
 export default {
   data: () => ({
     student: {},
+    deleteLoading: false,
   }),
 
   created() {
@@ -231,6 +233,22 @@ export default {
       }
       return age;
     },
+
+    async deleteStudent() {
+      this.deleteLoading = true;
+      await updateDoc(doc(db, "registration", this.$route.params.student), {
+        status: "deleted",
+      });
+      this.deleteLoading = false;
+      this.snackbar.active = true;
+      this.snackbar.text = "Student deleted successfully";
+      this.snackbar.color = "success";
+      this.getStudent()
+    },
+  },
+
+  computed: {
+    ...mapState(["snackbar"]),
   },
 };
 </script>

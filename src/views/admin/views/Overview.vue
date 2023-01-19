@@ -2,12 +2,12 @@
   <v-container>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" md="4">
-        <v-card class="card rounded-lg" color="transparent" flat :to="item.to">
+        <v-card class="rounded-lg" color="transparent" flat :to="item.to">
           <v-card-text>
             <v-row justify="space-between">
               <v-col cols="4">
                 <v-avatar
-                  color="#040D21"
+                  color="indigo"
                   size="50"
                   rounded="0"
                   class="rounded-lg"
@@ -77,13 +77,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  background: rgba(92, 107, 192, 0.251) !important;
-  backdrop-filter: blur(6px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
-
 .icon {
   font-size: 2rem;
 }

@@ -1,5 +1,5 @@
 import { db } from "@/plugins/firebase"
-import { collection, getDocs } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 
 const state = {
     students: []
@@ -18,14 +18,13 @@ const mutations = {
 const actions = {
     async fetchStudents({ commit }) {
         this.state.getAllStudents.students = []
-        const querySnapshot = await getDocs(collection(db, "registration"))
+        const querySnapshot = await getDocs(query(collection(db, "registration"), where("status", "!=", "deleted")))
 
         querySnapshot.forEach((doc) => {
             commit('setStudents', {
                 id: doc.id,
                 ...doc.data()
             })
-            // console.log(doc.id, " => ", doc.data());
         });
     }
 }
