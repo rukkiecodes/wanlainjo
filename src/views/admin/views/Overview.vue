@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" md="4">
-        <v-card class="rounded-lg" color="transparent" flat :to="item.to">
+        <v-card class="rounded-lg" color="indigo-lighten-5" flat :to="item.to">
           <v-card-text>
             <v-row justify="space-between">
               <v-col cols="4">
@@ -29,7 +29,9 @@
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                       : item.title == "Courses"
-                      ? 100
+                      ? countCourses.count
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                       : item.title == "Instructors"
                       ? 100
                       : 0
@@ -71,7 +73,7 @@ export default {
   }),
 
   computed: {
-    ...mapState(["countStudents"]),
+    ...mapState(["countStudents", "countCourses"]),
   },
 };
 </script>

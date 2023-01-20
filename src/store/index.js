@@ -16,6 +16,9 @@ import leftDrawer from './modules/admin/leftDrawer'
 // countStudents
 import countStudents from './modules/admin/countStudents'
 
+// countCourses
+import countCourses from './modules/admin/countCourses'
+
 // get students
 import getAllStudents from './modules/admin/getAllStudents'
 import getAllDeletedStudents from './modules/admin/getAllDeletedStudents'
@@ -35,6 +38,9 @@ export default createStore({
 
         // countStudents
         countStudents,
+
+        // countCourses
+        countCourses,
 
         // get students
         getAllStudents,
