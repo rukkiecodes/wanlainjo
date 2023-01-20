@@ -54,6 +54,10 @@ export default {
                 {
                     path: ':id',
                     component: () => import("@/views/admin/views/courses/ViewCourse.vue"),
+                },
+                {
+                    path: 'addCourse',
+                    component: () => import("@/views/admin/views/courses/AddCourse.vue"),
                 }
             ]
         },

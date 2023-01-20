@@ -4,6 +4,14 @@
       <v-icon class="mr-2">mdi-arrow-left</v-icon>
       <span class="text-capitalize">Go Back</span>
     </v-btn>
+    <v-spacer />
+    <v-btn
+      @click="addNewCourse"
+      class="bg-indigo text-capitalize"
+      :loading="saveLoading"
+      size="large"
+      >Save Course</v-btn
+    >
   </v-toolbar>
   <v-container>
     <v-row>
@@ -14,7 +22,7 @@
               <v-btn icon size="x-small" flat>
                 <i class="lar la-edit editIcon"></i>
               </v-btn>
-              {{ currentCourse?.title }}
+              {{ currentCourse?.title || "Add Course Title" }}
             </span>
             <v-dialog v-model="titleDialog" activator="parent" width="400">
               <v-card>
@@ -24,26 +32,12 @@
                     label="Course title"
                     variant="outlined"
                     hide-details
-                    @keypress.enter="
-                      () => {
-                        updateCurrentCourseTitle();
-                        titleDialog = false;
-                      }
-                    "
+                    @keypress.enter="titleDialog = false"
                   />
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn
-                    class="bg-indigo"
-                    text
-                    @click="
-                      () => {
-                        titleDialog = false;
-                        updateCurrentCourseTitle();
-                      }
-                    "
-                  >
+                  <v-btn class="bg-indigo" text @click="titleDialog = false">
                     Done
                   </v-btn>
                 </v-card-actions>
@@ -59,7 +53,12 @@
             <v-card flat>
               <v-card-title class="text-h6 px-0">Course Image</v-card-title>
               <v-card-text class="pa-0">
-                <v-img :src="currentCourse?.image" />
+                <v-img
+                  :src="
+                    currentCourse?.image ||
+                    'https://res.cloudinary.com/rukkiecodes/image/upload/v1673293841/wanlainjo/meetings-bg_ofgipt.jpg'
+                  "
+                />
                 <v-dialog
                   v-model="imageDialog"
                   activator="parent"
@@ -69,7 +68,12 @@
                   <v-card>
                     <v-card-text class="px-0">
                       <v-card-text class="px-3">
-                        <v-img :src="currentCourse?.image" />
+                        <v-img
+                          :src="
+                            currentCourse?.image ||
+                            'https://res.cloudinary.com/rukkiecodes/image/upload/v1673293841/wanlainjo/meetings-bg_ofgipt.jpg'
+                          "
+                        />
                       </v-card-text>
                       <v-card-title>Choose from gallery</v-card-title>
                       <v-row dense>
@@ -80,12 +84,7 @@
                           class="pa-0"
                         >
                           <v-card
-                            @click="
-                              () => {
-                                currentCourse.image = img;
-                                updateCurrentCourseImage();
-                              }
-                            "
+                            @click="currentCourse.image = img"
                             flat
                             height="100"
                           >
@@ -101,12 +100,7 @@
                       <v-btn
                         class="bg-indigo"
                         text
-                        @click="
-                          () => {
-                            imageDialog = false;
-                            updateCurrentCourseImage();
-                          }
-                        "
+                        @click="imageDialog = false"
                       >
                         Done
                       </v-btn>
@@ -125,7 +119,10 @@
                   <v-btn icon size="x-small" flat>
                     <i class="lar la-edit editIcon"></i>
                   </v-btn>
-                  {{ currentCourse?.body }}
+                  {{
+                    currentCourse?.body ||
+                    "Please write a short description here."
+                  }}
                   <v-dialog v-model="bodyDialog" activator="parent" width="400">
                     <v-card>
                       <v-card-text>
@@ -143,12 +140,7 @@
                         <v-btn
                           class="bg-indigo"
                           text
-                          @click="
-                            () => {
-                              bodyDialog = false;
-                              updateCurrentCourseBody();
-                            }
-                          "
+                          @click="bodyDialog = false"
                         >
                           Done
                         </v-btn>
@@ -173,7 +165,7 @@
                     <i class="lar la-edit editIcon"></i>
                   </v-btn>
                   {{ currentCourse?.duration }}
-                  {{ currentCourse?.duration > 1 ? "Months" : "Month" }}
+                  {{ currentCourse?.duration != 1 ? "Months" : "Month" }}
                   <v-dialog
                     v-model="durationDialog"
                     activator="parent"
@@ -188,12 +180,7 @@
                           min="1"
                           hide-details
                           type="number"
-                          @keypress.enter="
-                            () => {
-                              updateCurrentCourseDuration();
-                              durationDialog = false;
-                            }
-                          "
+                          @keypress.enter="durationDialog = false"
                         />
                       </v-card-text>
                       <v-card-actions>
@@ -201,12 +188,7 @@
                         <v-btn
                           class="bg-indigo"
                           text
-                          @click="
-                            () => {
-                              durationDialog = false;
-                              updateCurrentCourseDuration();
-                            }
-                          "
+                          @click="durationDialog = false"
                         >
                           Done
                         </v-btn>
@@ -245,12 +227,7 @@
                           min="1"
                           hide-details
                           type="number"
-                          @keypress.enter="
-                            () => {
-                              updateCurrentCoursePrice();
-                              priceDialog = false;
-                            }
-                          "
+                          @keypress.enter="priceDialog = false"
                         />
                       </v-card-text>
                       <v-card-actions>
@@ -258,12 +235,7 @@
                         <v-btn
                           class="bg-indigo"
                           text
-                          @click="
-                            () => {
-                              priceDialog = false;
-                              updateCurrentCoursePrice();
-                            }
-                          "
+                          @click="priceDialog = false"
                         >
                           Done
                         </v-btn>
@@ -281,15 +253,24 @@
               <v-card-actions>
                 <v-text-field
                   v-model="whatYouWillLearn"
-                  @keypress.enter="updateCurrentCourseWhatYouWillLearn"
                   variant="outlined"
+                  @keypress.enter="
+                    () => {
+                      currentCourse.whatYouWillLearn.push(whatYouWillLearn);
+                      whatYouWillLearn = '';
+                    }
+                  "
                   label="What you will teach"
                   hide-details
                 />
                 <v-btn
-                  @click="updateCurrentCourseWhatYouWillLearn"
-                  class="bg-indigo ml-4"
-                  :disabled="!whatYouWillLearn"
+                  @click="
+                    () => {
+                      currentCourse.whatYouWillLearn.push(whatYouWillLearn);
+                      whatYouWillLearn = '';
+                    }
+                  "
+                  class="ml-4 bg-indigo rounded-0"
                   >Add</v-btn
                 >
               </v-card-actions>
@@ -301,8 +282,8 @@
                 >
                   <v-col cols="1">
                     <v-btn
+                      @click="() => currentCourse.whatYouWillLearn.splice(i, 1)"
                       icon
-                      @click="deleteWhatYouWillLearn(wywl)"
                       flat
                       size="x-small"
                     >
@@ -323,7 +304,6 @@
               <v-card-text>
                 <v-text-field
                   v-model="outline"
-                  @keypress.enter="updateCurrentCourseWhatYouWillLearn"
                   variant="outlined"
                   label="Add outline"
                 />
@@ -338,15 +318,6 @@
                   multiple
                 ></v-combobox>
               </v-card-text>
-              <v-card-actions>
-                <v-spacer />
-                <v-btn
-                  @click="updateCurrentCourseOutline"
-                  :loading="outlineLoading"
-                  class="bg-indigo"
-                  >Add outline</v-btn
-                >
-              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -354,21 +325,23 @@
     </v-row>
   </v-container>
 </template>
-  
-  <script>
-import {
-  arrayRemove,
-  arrayUnion,
-  doc,
-  onSnapshot,
-  updateDoc,
-} from "@firebase/firestore";
-import { mapGetters } from "vuex";
+    
+    <script>
+import { addDoc, collection } from "@firebase/firestore";
+import { mapGetters, mapState } from "vuex";
 import { db } from "@/plugins/firebase";
 import gallery from "../gallery";
 export default {
   data: () => ({
-    currentCourse: null,
+    currentCourse: {
+      title: "",
+      description: "",
+      image: "",
+      duration: 0,
+      price: 0,
+      whatYouWillLearn: [],
+      outline: [],
+    },
     imageDialog: false,
     bodyDialog: false,
     durationDialog: false,
@@ -377,92 +350,44 @@ export default {
     whatYouWillLearn: "",
     outline: "",
     breakdown: [],
-    outlineLoading: false,
     gallery,
+    saveLoading: false,
   }),
 
-  created() {
-    this.$nextTick(() => {
-      this.getCurrentCourse();
-    });
-  },
-
   methods: {
-    async getCurrentCourse() {
-      const unsub = onSnapshot(
-        doc(db, "courses", this.$route.params.id),
-        (doc) => {
-          this.currentCourse = doc.data();
-        }
-      );
-      return unsub;
-    },
-
-    updateCurrentCourseImage() {
-      updateDoc(doc(db, "courses", this.$route.params.id), {
-        image: this.currentCourse.image,
-      });
-    },
-
-    updateCurrentCourseBody() {
-      updateDoc(doc(db, "courses", this.$route.params.id), {
-        body: this.currentCourse.body,
-      });
-    },
-
-    updateCurrentCourseDuration() {
-      updateDoc(doc(db, "courses", this.$route.params.id), {
-        duration: parseInt(this.currentCourse.duration),
-      });
-    },
-
-    updateCurrentCoursePrice() {
-      updateDoc(doc(db, "courses", this.$route.params.id), {
-        price: parseInt(this.currentCourse.price),
-      });
-    },
-
-    updateCurrentCourseTitle() {
-      updateDoc(doc(db, "courses", this.$route.params.id), {
+    async addNewCourse() {
+      this.saveLoading = true;
+      await addDoc(collection(db, "courses"), {
         title: this.currentCourse.title,
+        body: this.currentCourse.body,
+        image: this.currentCourse.image,
+        duration: parseInt(this.currentCourse.duration),
+        price: parseInt(this.currentCourse.price),
+        whatYouWillLearn: this.currentCourse.whatYouWillLearn,
+        outline: [
+          {
+            title: this.outline,
+            show: false,
+            breakdown: [...this.breakdown],
+          },
+        ],
       });
-    },
 
-    async updateCurrentCourseWhatYouWillLearn() {
-      await updateDoc(doc(db, "courses", this.$route.params.id), {
-        whatYouWillLearn: arrayUnion(this.whatYouWillLearn),
-      });
-      this.whatYouWillLearn = "";
-    },
-
-    async deleteWhatYouWillLearn(prop) {
-      await updateDoc(doc(db, "courses", this.$route.params.id), {
-        whatYouWillLearn: arrayRemove(prop),
-      });
-    },
-
-    async updateCurrentCourseOutline() {
-      this.outlineLoading = true;
-      await updateDoc(doc(db, "courses", this.$route.params.id), {
-        outline: arrayUnion({
-          title: this.outline,
-          show: false,
-          breakdown: this.breakdown,
-        }),
-      });
-      this.outline = "";
-      this.breakdown = [];
-      this.outlineLoading = false;
+      this.saveLoading = false;
+      this.snackbar.active = true;
+      this.snackbar.text = "Course added successfully";
+      this.snackbar.color = "success";
     },
   },
 
   computed: {
     ...mapGetters(["courses"]),
+    ...mapState(["snackbar"]),
   },
 };
 </script>
-
-<style scoped>
+  
+  <style scoped>
 .editIcon {
   font-size: 2em;
 }

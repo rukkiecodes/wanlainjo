@@ -3,7 +3,7 @@
     <v-col
       cols="12"
       sm="4"
-      v-for="(course, i) in courses.slice(0, slice)"
+      v-for="(course, i) in coursesDummy.slice(0, slice)"
       :key="i"
     >
       <v-card>
@@ -43,7 +43,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["courses"]),
+    ...mapGetters(["coursesDummy"]),
   },
 };
 </script>

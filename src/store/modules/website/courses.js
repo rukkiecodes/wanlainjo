@@ -11,14 +11,14 @@ const getters = {
 
 const mutations = {
     setCourses(state, courses) {
-        state.courses = [courses]
+        state.courses.push(courses)
     }
 }
 
 const actions = {
     getCourses({ commit }) {
         const unsubscribe = onSnapshot(collection(db, 'courses'), querySnapshot => {
-            this.state.courses = []
+            this.state.courses.courses = []
             querySnapshot.forEach(doc => {
                 commit('setCourses', { id: doc.id, ...doc.data() })
             })

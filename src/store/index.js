@@ -5,6 +5,7 @@ import {
 // MODULES
 import drawer from './modules/website/drawer'
 import courses from './modules/website/courses'
+import coursesDummy from './modules/website/coursesDummy'
 import form from './modules/website/form'
 import snackbar from './modules/snackbar'
 import events from './modules/website/events'
@@ -24,6 +25,7 @@ export default createStore({
     modules: {
         drawer,
         courses,
+        coursesDummy,
         form,
         snackbar,
         events,

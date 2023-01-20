@@ -1,4 +1,9 @@
 <template>
+  <v-toolbar density="comfortable" color="transparent">
+    <v-btn to="/admin/courses/addCourse" size="large" class="bg-indigo"
+      >Add Course</v-btn
+    >
+  </v-toolbar>
   <v-container>
     <v-row>
       <v-col cols="12" sm="4" v-for="course in courses" :key="course?.id">

@@ -1,5 +1,5 @@
 const state = {
-    courses: [
+    coursesDummy: [
         {
             image: "https://res.cloudinary.com/rukkiecodes/image/upload/v1673280092/wanlainjo/courses/microsoft_blonkb.jpg",
             title: 'Microsoft Office Suite',
@@ -1117,7 +1117,7 @@ const state = {
 }
 
 const getters = {
-    courses: state => state.courses
+    coursesDummy: state => state.coursesDummy
 }
 
 export default { state, getters }
