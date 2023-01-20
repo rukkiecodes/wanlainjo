@@ -60,6 +60,59 @@
               <v-card-title class="text-h6 px-0">Course Image</v-card-title>
               <v-card-text class="pa-0">
                 <v-img :src="currentCourse?.image" />
+                <v-dialog
+                  v-model="imageDialog"
+                  activator="parent"
+                  width="600"
+                  scrollable
+                >
+                  <v-card>
+                    <v-card-text class="px-0">
+                      <v-card-text class="px-3">
+                        <v-img :src="currentCourse?.image" />
+                      </v-card-text>
+                      <v-card-title>Choose from gallery</v-card-title>
+                      <v-row dense>
+                        <v-col
+                          v-for="(img, i) in gallery"
+                          :key="i"
+                          cols="4"
+                          class="pa-0"
+                        >
+                          <v-card
+                            @click="
+                              () => {
+                                currentCourse.image = img;
+                                updateCurrentCourseImage();
+                              }
+                            "
+                            flat
+                            height="100"
+                          >
+                            <v-card-text class="p-0">
+                              <v-img cover :src="img" />
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-spacer />
+                      <v-btn
+                        class="bg-indigo"
+                        text
+                        @click="
+                          () => {
+                            imageDialog = false;
+                            updateCurrentCourseImage();
+                          }
+                        "
+                      >
+                        Done
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-card-text>
             </v-card>
           </v-col>
@@ -311,9 +364,11 @@ import {
 } from "@firebase/firestore";
 import { mapGetters } from "vuex";
 import { db } from "@/plugins/firebase";
+import gallery from "../gallery";
 export default {
   data: () => ({
     currentCourse: null,
+    imageDialog: false,
     bodyDialog: false,
     durationDialog: false,
     priceDialog: false,
@@ -330,6 +385,7 @@ export default {
       "Extras",
     ],
     outlineLoading: false,
+    gallery,
   }),
 
   created() {
@@ -347,6 +403,12 @@ export default {
         }
       );
       return unsub;
+    },
+
+    updateCurrentCourseImage() {
+      updateDoc(doc(db, "courses", this.$route.params.id), {
+        image: this.currentCourse.image,
+      });
     },
 
     updateCurrentCourseBody() {
