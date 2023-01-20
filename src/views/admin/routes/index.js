@@ -44,7 +44,18 @@ export default {
         {
             path: 'courses',
             name: 'admin.courses',
-            component: () => import("@/views/admin/views/Courses.vue"),
+            component: () => import("@/views/admin/views/courses/View.vue"),
+
+            children: [
+                {
+                    path: '',
+                    component: () => import("@/views/admin/views/courses/Courses.vue"),
+                },
+                {
+                    path: ':id',
+                    component: () => import("@/views/admin/views/courses/ViewCourse.vue"),
+                }
+            ]
         },
         {
             path: 'instructors',

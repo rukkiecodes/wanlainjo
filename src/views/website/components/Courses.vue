@@ -42,10 +42,6 @@ export default {
     },
   },
 
-  data: () => ({
-    currentCourse: null,
-  }),
-
   computed: {
     ...mapGetters(["courses"]),
   },

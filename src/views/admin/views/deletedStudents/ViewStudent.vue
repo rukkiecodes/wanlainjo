@@ -5,7 +5,6 @@
         <v-icon class="mr-2">mdi-arrow-left</v-icon>
         <span class="text-capitalize">Go Back</span>
       </v-btn>
-      <v-spacer></v-spacer>
     </v-toolbar>
     <v-row>
       <v-col cols="12" sm="12" md="4">
