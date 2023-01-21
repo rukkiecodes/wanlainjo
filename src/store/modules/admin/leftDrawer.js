@@ -22,6 +22,11 @@ const state = {
             to: '/admin/courses'
         },
         {
+            title: 'Reports',
+            icon: 'las la-newspaper',
+            to: '/admin/reports'
+        },
+        {
             title: 'Instructors',
             icon: 'las la-chalkboard-teacher',
             to: '/admin/instructors'

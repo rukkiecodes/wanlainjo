@@ -66,5 +66,21 @@ export default {
             name: 'admin.instructors',
             component: () => import("@/views/admin/views/Instructors.vue"),
         },
-    ]
+        {
+            path: 'reports',
+            name: 'admin.reports',
+            component: () => import("@/views/admin/views/reports/View.vue"),
+
+            children: [
+                {
+                    path: '',
+                    component: () => import("@/views/admin/views/reports/Reports.vue"),
+                },
+                {
+                    path: 'addReports',
+                    component: () => import("@/views/admin/views/reports/AddReports.vue"),
+                },
+            ]
+        }
+    ],
 }
