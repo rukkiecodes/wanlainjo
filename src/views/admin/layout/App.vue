@@ -26,11 +26,12 @@ export default {
       this.fetchDeletedStudents();
       this.getCourses();
       this.countCourses();
+      this.getReports();
     });
   },
 
   methods: {
-    ...mapActions(["countStudents", "fetchStudents", "fetchDeletedStudents", "getCourses", "countCourses"]),
+    ...mapActions(["countStudents", "fetchStudents", "fetchDeletedStudents", "getCourses", "countCourses", "getReports"]),
   },
 };
 </script>

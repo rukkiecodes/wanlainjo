@@ -10,18 +10,12 @@ import form from './modules/website/form'
 import snackbar from './modules/snackbar'
 import events from './modules/website/events'
 
-// admin
 import leftDrawer from './modules/admin/leftDrawer'
-
-// countStudents
 import countStudents from './modules/admin/countStudents'
-
-// countCourses
 import countCourses from './modules/admin/countCourses'
-
-// get students
 import getAllStudents from './modules/admin/getAllStudents'
 import getAllDeletedStudents from './modules/admin/getAllDeletedStudents'
+import reports from './modules/admin/reports'
 
 export default createStore({
     strict: false,
@@ -32,18 +26,11 @@ export default createStore({
         form,
         snackbar,
         events,
-
-        // admin
         leftDrawer,
-
-        // countStudents
         countStudents,
-
-        // countCourses
         countCourses,
-
-        // get students
         getAllStudents,
-        getAllDeletedStudents
+        getAllDeletedStudents,
+        reports
     },
 })

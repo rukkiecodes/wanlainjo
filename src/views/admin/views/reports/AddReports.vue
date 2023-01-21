@@ -2,8 +2,14 @@
   <v-container>
     <v-card flat>
       <v-card-actions>
+        <v-btn @click="$router.go(-1)">
+          <v-icon class="mr-2">mdi-arrow-left</v-icon>
+          <span class="text-capitalize">Go Back</span>
+        </v-btn>
         <v-spacer />
-        <v-btn class="bg-indigo" :loading="loading" @click="save">Save report</v-btn>
+        <v-btn class="bg-indigo" :loading="loading" @click="save"
+          >Save report</v-btn
+        >
       </v-card-actions>
       <v-card-text class="px-2">
         <v-text-field v-model="title" variant="outlined" label="Title" />
@@ -13,7 +19,7 @@
           type="date"
           label="Date"
         />
-        <v-card id="editor" height="400"></v-card>
+        <v-card id="editor" height="300"></v-card>
       </v-card-text>
     </v-card>
   </v-container>

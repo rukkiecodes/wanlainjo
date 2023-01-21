@@ -80,6 +80,10 @@ export default {
                     path: 'addReports',
                     component: () => import("@/views/admin/views/reports/AddReports.vue"),
                 },
+                {
+                    path: ':id',
+                    component: () => import("@/views/admin/views/reports/ViewReport.vue"),
+                },
             ]
         }
     ],
