@@ -349,6 +349,30 @@
               </v-card-actions>
             </v-card>
           </v-col>
+
+          <v-col>
+            <v-row dense>
+              <v-col
+                v-for="(outline, i) in currentCourse?.outline"
+                :key="i"
+                cols="12"
+                sm="6"
+              >
+                <v-card>
+                  <v-card-title class="text-h6">{{
+                    outline.title
+                  }}</v-card-title>
+                  <v-card-text>
+                    <ul class="pa-2">
+                      <li v-for="(breakdown, i) in outline.breakdown" :key="i" class="text-caption">
+                        {{ breakdown }}
+                      </li>
+                    </ul>
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
