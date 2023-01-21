@@ -10,7 +10,7 @@
       icon
       class="hidden-lg-and-up"
     >
-      <v-icon class="text-green-lighten-1">mdi-menu</v-icon>
+      <v-icon>mdi-menu</v-icon>
     </v-btn>
   </v-app-bar>
 </template>
