@@ -4,7 +4,7 @@ const state = {
         {
             title: 'Overview',
             icon: 'las la-chart-pie',
-            to: '/admin'
+            to: '/admin/overview'
         },
         {
             title: 'Students',

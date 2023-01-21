@@ -5,8 +5,8 @@ export default {
 
     children: [
         {
-            path: '',
-            name: 'admin.dashboard',
+            path: 'overview',
+            name: 'admin.overview',
             component: () => import("@/views/admin/views/Overview.vue"),
         },
         {

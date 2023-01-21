@@ -132,7 +132,7 @@ export default {
   }),
 
   created() {
-    const currentCourse = this.courses.find(
+    const currentCourse = this.coursesDummy.find(
       (course) => course?.title === this.$route.params.title
     );
 
@@ -140,7 +140,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["courses"]),
+    ...mapGetters(["coursesDummy"]),
   },
 };
 </script>
