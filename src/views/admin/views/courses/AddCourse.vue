@@ -357,6 +357,16 @@
                       </li>
                     </ul>
                   </v-card-text>
+                  <v-card-actions>
+                    <v-btn
+                      @click="() => currentCourse?.outline.splice(i, 1)"
+                      flat
+                      block
+                      class="text-red text-capitalize"
+                    >
+                      Delete
+                    </v-btn>
+                  </v-card-actions>
                 </v-card>
               </v-col>
             </v-row>
