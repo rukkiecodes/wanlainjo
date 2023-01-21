@@ -18,7 +18,8 @@
             </span>
             <v-dialog v-model="titleDialog" activator="parent" width="400">
               <v-card>
-                <v-card-text>
+                <v-card-title>Edit Title</v-card-title>
+                <v-card-text class="px-2">
                   <v-text-field
                     v-model="currentCourse.title"
                     label="Course title"
@@ -33,10 +34,10 @@
                   />
                 </v-card-text>
                 <v-card-actions>
-                  <v-spacer />
                   <v-btn
                     class="bg-indigo"
                     text
+                    block
                     @click="
                       () => {
                         titleDialog = false;
@@ -67,7 +68,8 @@
                   scrollable
                 >
                   <v-card>
-                    <v-card-text class="px-0">
+                    <v-card-title>Edit Image</v-card-title>
+                    <v-card-text class="px-2">
                       <v-card-text class="px-3">
                         <v-img :src="currentCourse?.image" />
                       </v-card-text>
@@ -101,6 +103,7 @@
                       <v-btn
                         class="bg-indigo"
                         text
+                        block
                         @click="
                           () => {
                             imageDialog = false;
@@ -128,7 +131,8 @@
                   {{ currentCourse?.body }}
                   <v-dialog v-model="bodyDialog" activator="parent" width="400">
                     <v-card>
-                      <v-card-text>
+                      <v-card-title>Edit Description</v-card-title>
+                      <v-card-text class="px-2">
                         <v-textarea
                           v-model="currentCourse.body"
                           label="Course Description"
@@ -136,13 +140,14 @@
                           rows="1"
                           auto-grow
                           row-height="15"
+                          hide-details
                         />
                       </v-card-text>
                       <v-card-actions>
-                        <v-spacer />
                         <v-btn
                           class="bg-indigo"
                           text
+                          block
                           @click="
                             () => {
                               bodyDialog = false;
@@ -180,7 +185,8 @@
                     width="400"
                   >
                     <v-card>
-                      <v-card-text>
+                      <v-card-title>Edit Duration</v-card-title>
+                      <v-card-text class="px-2">
                         <v-text-field
                           v-model="currentCourse.duration"
                           label="Course duration"
@@ -197,10 +203,10 @@
                         />
                       </v-card-text>
                       <v-card-actions>
-                        <v-spacer />
                         <v-btn
                           class="bg-indigo"
                           text
+                          block
                           @click="
                             () => {
                               durationDialog = false;
@@ -237,7 +243,8 @@
                     width="400"
                   >
                     <v-card>
-                      <v-card-text>
+                      <v-card-title>Edit Fee</v-card-title>
+                      <v-card-text class="px-2">
                         <v-text-field
                           v-model="currentCourse.price"
                           label="Course price"
@@ -254,10 +261,10 @@
                         />
                       </v-card-text>
                       <v-card-actions>
-                        <v-spacer />
                         <v-btn
                           class="bg-indigo"
                           text
+                          block
                           @click="
                             () => {
                               priceDialog = false;
@@ -290,6 +297,7 @@
                   @click="updateCurrentCourseWhatYouWillLearn"
                   class="bg-indigo ml-4"
                   :disabled="!whatYouWillLearn"
+                  height="58"
                   >Add</v-btn
                 >
               </v-card-actions>
@@ -320,20 +328,18 @@
           <v-col cols="12">
             <v-card>
               <v-card-title class="text-h6">Course outline</v-card-title>
-              <v-card-text>
+              <v-card-text class="px-2">
                 <v-text-field
                   v-model="outline"
                   @keypress.enter="updateCurrentCourseWhatYouWillLearn"
                   variant="outlined"
                   label="Add outline"
                 />
-              </v-card-text>
-              <v-divider />
-              <v-card-text>
                 <v-combobox
                   v-model="breakdown"
                   label="Add breakdown"
                   variant="outlined"
+                  hide-details
                   chips
                   multiple
                 ></v-combobox>
@@ -364,7 +370,11 @@
                   }}</v-card-title>
                   <v-card-text>
                     <ul class="pa-2">
-                      <li v-for="(breakdown, i) in outline.breakdown" :key="i" class="text-caption">
+                      <li
+                        v-for="(breakdown, i) in outline.breakdown"
+                        :key="i"
+                        class="text-caption"
+                      >
                         {{ breakdown }}
                       </li>
                     </ul>
