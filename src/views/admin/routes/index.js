@@ -5,6 +5,11 @@ export default {
 
     children: [
         {
+            path: '',
+            name: 'admin.overview1',
+            component: () => import("@/views/admin/views/Overview.vue"),
+        },
+        {
             path: 'overview',
             name: 'admin.overview',
             component: () => import("@/views/admin/views/Overview.vue"),
@@ -85,6 +90,6 @@ export default {
                     component: () => import("@/views/admin/views/reports/ViewReport.vue"),
                 },
             ]
-        }
+        },
     ],
 }

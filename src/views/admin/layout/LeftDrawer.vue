@@ -4,8 +4,8 @@
       <v-list-item
         prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
       >
-        <v-list-item-title class="text-indigo-lighten-1 text-body-2 font-weight-bold">Romaric wanlainjo</v-list-item-title>
-        <v-list-item-subtitle class="text-indigo-lighten-1 text-caption">Admin</v-list-item-subtitle>
+        <v-list-item-title class="text-indigo-lighten-1 text-body-2 font-weight-bold">Admin</v-list-item-title>
+        <v-list-item-subtitle class="text-indigo-lighten-1 text-caption">admin@gmail.com</v-list-item-subtitle>
       </v-list-item>
     </v-list>
 

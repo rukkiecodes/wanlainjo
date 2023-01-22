@@ -26,11 +26,6 @@ const state = {
             icon: 'las la-newspaper',
             to: '/admin/reports'
         },
-        {
-            title: 'Instructors',
-            icon: 'las la-chalkboard-teacher',
-            to: '/admin/instructors'
-        },
     ]
 }
 
