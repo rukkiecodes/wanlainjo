@@ -998,7 +998,7 @@ const state = {
             duration: 8,
             outline: [
                 {
-                    title: ' Digital Marketing and SEO',
+                    title: 'Digital Marketing and SEO',
                     show: true,
                     breakdown: [
                         "Explain what Digital Marketing entail",

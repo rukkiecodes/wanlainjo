@@ -18,8 +18,18 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
+  mounted() {
+    this.$nextTick(() => {
+      this.getCourses();
+    });
+  },
+
+  methods: {
+    ...mapActions(["getCourses"])
+  },
+
   computed: {
     ...mapState(["snackbar"]),
   },
