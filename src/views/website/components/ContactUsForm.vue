@@ -44,7 +44,7 @@ export default {
         cards: [
             {
                 title: 'Email Address',
-                body: 'Info@WanLainjotechhub.org'
+                body: 'info@wanLainjotechhub.org'
             },
             {
                 title: 'Phone Number',
