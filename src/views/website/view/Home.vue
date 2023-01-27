@@ -266,6 +266,10 @@ export default {
     Bootcamp,
     ContactUsForm,
   },
+  
+  mounted() {
+    this.$router.push("/home");
+  },
 };
 </script>
 

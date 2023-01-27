@@ -26,6 +26,11 @@ const state = {
             icon: 'las la-newspaper',
             to: '/admin/reports'
         },
+        {
+            title: 'Web Settings',
+            icon: 'las la-globe-africa',
+            to: '/admin/webSettings'
+        },
     ]
 }
 

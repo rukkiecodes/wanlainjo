@@ -4,7 +4,7 @@ const state = {
         {
             title: 'Home',
             icon: 'mdi-home',
-            to: '/'
+            to: '/home'
         },
         {
             title: 'About Us',

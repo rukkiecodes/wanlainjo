@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="6">
         <v-card
           class="rounded-lg"
           color="indigo-lighten-5"
@@ -89,7 +89,7 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="6">
         <v-card
           class="rounded-lg"
           color="indigo-lighten-5"
@@ -113,11 +113,11 @@
                 class="d-flex flex-column justify-center align-end"
               >
                 <h3 class="font-weight-bold text-h6 mb-0 text-indigo-lighten-1">
-                  Students
+                  Courses
                 </h3>
                 <h3 class="font-weight-bold mb-0 text-indigo-lighten-1">
                   {{
-                    countStudents.count
+                    countCourses.count
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",") || 0
                   }}

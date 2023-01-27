@@ -11,7 +11,7 @@
       :key="i"
       :to="route.to"
       variant="text"
-      class="text-body-2 hidden-sm-and-down"
+      class="text-body-2 hidden-sm-and-down ml-2"
       >{{ route.title }}</v-btn
     >
     <v-btn variant="text" class="text-body-1 hidden-sm-and-down">

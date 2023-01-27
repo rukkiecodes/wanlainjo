@@ -10,6 +10,11 @@ export default {
             component: () => import('@/views/website/view/Home.vue'),
         },
         {
+            path: '/home',
+            name: 'home.page',
+            component: () => import('@/views/website/view/Home.vue'),
+        },
+        {
             path: '/about',
             name: 'about',
             component: () => import('@/views/website/view/About.vue'),
