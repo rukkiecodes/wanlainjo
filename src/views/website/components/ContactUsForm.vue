@@ -44,11 +44,11 @@ export default {
         cards: [
             {
                 title: 'Email Address',
-                body: 'info@wanlainjotech-hub.com'
+                body: 'info@wanLainjotechhub.org'
             },
             {
                 title: 'Phone Number',
-                body: '+2348165194182'
+                body: '+2348179612183'
             },
             {
                 title: 'Office Address',
