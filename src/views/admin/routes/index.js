@@ -90,21 +90,6 @@ export default {
                     component: () => import("@/views/admin/views/reports/ViewReport.vue"),
                 },
             ]
-        },
-        {
-            path: 'webSettings',
-            component: () => import("@/views/admin/views/web/View.vue"),
-
-            children: [
-                {
-                    path: '',
-                    component: () => import("@/views/admin/views/web/routes/Home.vue"),
-                },
-                {
-                    path: 'home',
-                    component: () => import("@/views/admin/views/web/routes/Home.vue"),
-                },
-            ]
         }
     ],
 }

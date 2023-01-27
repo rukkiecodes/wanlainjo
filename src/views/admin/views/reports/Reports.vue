@@ -15,9 +15,11 @@
       >
         <v-card>
           <v-card-title> {{ report?.title }} </v-card-title>
-          <v-card-text>
-            <div v-html="`${report?.html}`.slice(0, 700)"></div>
-          </v-card-text>
+          <v-card max-height="300" flat>
+            <v-card-text>
+              <div v-html="report?.html"></div>
+            </v-card-text>
+          </v-card>
           <v-card-actions>
             <v-btn
               :to="`/admin/reports/${report?.id}`"
@@ -40,6 +42,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
